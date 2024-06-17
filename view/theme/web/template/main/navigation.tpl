@@ -18,9 +18,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <?php foreach ($languages as $language) { ?>
             &nbsp;<img src="image/flags/<?php echo $language['image']; ?>" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>" onclick="setLanguageAndSubmit('<?php echo $language['code']; ?>');" />
             <?php } ?>
+            languages
             <input type="hidden" name="language_code" id="language_code" value="" />
             <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-           < /div>
          </form>
        </li>
 <?php } ?>
