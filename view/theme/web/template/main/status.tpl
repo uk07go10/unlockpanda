@@ -63,14 +63,14 @@
     <section class="check-order-status-section">
         <div class="row mb-5">
             <div class="col-12">
-                <h1 class="text-center check-order-status-title">Check order status</h1>
+                <h1 class="text-center check-order-status-title">Comprobar el estado del pedido</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
                 <p class="pt-3">
                     Introduce en los cuadros el ID de tu pedido y el correo electrónico que utilizaste al crear el pedido y haz clic en Verificar
-estado.
+  estado.
                 </p>
                 <ul>
                     <li>Utilice el mismo correo electrónico que utilizó para realizar el pedido.</li>
