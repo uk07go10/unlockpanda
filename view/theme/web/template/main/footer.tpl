@@ -1,6 +1,4 @@
 <!-- Footer -->
-
-#################
 <?php if($this->session->data['language'] == 'en'){ ?>
 <div class="footer-container">
     <div class="footer-row">
