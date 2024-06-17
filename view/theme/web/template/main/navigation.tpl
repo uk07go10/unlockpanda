@@ -13,7 +13,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <ul class="navigation-menu">
 <?php if (count($languages) > 1) { ?>
-<li class="navigation-menu-item dropdown-tab custom-flex-row items-center">
+<li class="navigation-menu-item ">
 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
   <div id="language"><?php echo $text_language; ?><br />
     <?php foreach ($languages as $language) { ?>
