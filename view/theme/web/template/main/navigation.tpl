@@ -12,20 +12,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="/catalog/view/theme/web/img/logo.png" alt="Logo Image" class="logo-img" />
         </a>
         <ul class="navigation-menu">
-<?php if (count($languages) > 1) { ?>
-<li class="navigation-menu-item dropdown-tab custom-flex-row items-center">
-<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-  <div id="language" style="padding-bottom:29px;"><?php echo $text_language; ?><br />
-    <?php foreach ($languages as $language) { ?>
-      &nbsp;<img src="image/flags/<?php echo $language['image']; ?>" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>" onclick="setLanguageAndSubmit('<?php echo $language['code']; ?>');" style="cursor:pointer" />
-    <?php } ?>
-    <input type="hidden" name="language_code" id="language_code" value="" />
-    <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-  </div>
-</form>
-
- </li>
-<?php } ?>
+           <?php if (count($languages) > 1) { ?>
+           <li class="navigation-menu-item dropdown-tab custom-flex-row items-center">
+           <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+             <div id="language" style="padding-bottom:29px;"><?php echo $text_language; ?><br />
+               <?php foreach ($languages as $language) { ?>
+                 &nbsp;<img src="image/flags/<?php echo $language['image']; ?>" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>" onclick="setLanguageAndSubmit('<?php echo $language['code']; ?>');" style="cursor:pointer" />
+               <?php } ?>
+               <input type="hidden" name="language_code" id="language_code" value="" />
+               <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+             </div>
+           </form>
+           
+            </li>
+           <?php } ?>
 
             <li class="navigation-menu-item dropdown-tab custom-flex-row items-center">
                 <a href="#">Service</a>
@@ -169,6 +169,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li class="navigation-menu-item">
             <a href="/index.php?route=main/contact">Contact</a>
         </li>
+         <?php if (count($languages) > 1) { ?>
+           <li class="navigation-menu-item dropdown-tab custom-flex-row items-center">
+           <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+             <div id="language" style="padding-bottom:29px;"><?php echo $text_language; ?><br />
+               <?php foreach ($languages as $language) { ?>
+                 &nbsp;<img src="image/flags/<?php echo $language['image']; ?>" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>" onclick="setLanguageAndSubmit('<?php echo $language['code']; ?>');" style="cursor:pointer" />
+               <?php } ?>
+               <input type="hidden" name="language_code" id="language_code" value="" />
+               <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+             </div>
+           </form>
+           
+            </li>
+           <?php } ?>
     </ul>
 </div>
 <!-- Top Navigation -->
