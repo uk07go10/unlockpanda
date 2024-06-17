@@ -1,0 +1,2 @@
+<!DOCTYPE html><html class="no-js" lang="en"><head><?= $scripts ?></head><body><?= isset($header) ? $header : "" ?>
+<?= isset($header_form) ? $header_form : "" ?><section class="page-wrapper mt-50" id="page-content"><!-- SHOP SECTION START--><div class="shop-section mb-80"><div class="container"><div class="row"><div class="col-md-12 col-sm-12 col-xs-12 information-page"><?= $description ?></div></div></div></div><?= $footer ?>  </section></body></html>

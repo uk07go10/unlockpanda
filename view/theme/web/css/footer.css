@@ -1,0 +1,147 @@
+.footer-container {
+    width: 100%;
+    max-width: 1360px;
+    padding-top: 80px;
+    margin-top: auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+}
+
+.footer-desc {
+    color: #1E2532;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    margin: 24px 0;
+    width: 314px;
+}
+
+.social-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+    color: #1E2532;
+    transition-duration: 0.4s;
+}
+
+.social-link:hover {
+    color: #fff;
+    background-color: #287CDE;
+}
+
+.footer-menu-title {
+    color: #1E2532;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 132%;
+    margin: 0;
+}
+
+.footer-menu {
+    padding: 0;
+    margin: 0;
+    padding-left: 25px;
+    margin-top: 24px;
+    max-width: 290px;
+}
+
+.footer-menu a {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 180%;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.footer-reserved-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    margin-top: 24px;
+    border-top: 1px solid #E9E9E9;
+}
+
+.reserved-text {
+    color: rgba(0, 0, 0, 0.55);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0;
+}
+
+.policy-links {
+    color: rgba(0, 0, 0, 0.55);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0;
+}
+
+.policy-links a {
+    color: rgba(0, 0, 0, 0.55);
+    text-decoration: none;
+}
+
+@media (max-width: 1400px) {
+    .footer-container {
+        max-width: none;
+        padding: 0 40px;
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 957px) {
+    .footer-container {
+        padding: 0 20px;
+        padding-top: 40px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-menu-title {
+        font-size: 24px;
+    }
+
+    .footer-menu a {
+        font-size: 16px;
+    }
+
+    .footer-menu {
+        margin-top: 15px;
+    }
+
+    .reserved-text, .policy-links {
+        font-size: 14px;
+    }
+
+    .footer-reserved-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

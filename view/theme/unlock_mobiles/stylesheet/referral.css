@@ -1,0 +1,42 @@
+.sharer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.referral_link {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: -3px;
+}
+
+.login_info {
+    display: inline-block;
+    font-size: 13px;
+    float: right;
+    margin-top:20px;
+}
+
+.logout {
+    font-size: 13px;
+}
+
+input.round_corners_small.spaced {
+    border: 1px solid #4B2E71;
+    width: 200px;
+    height: 20px;
+    padding: 7px;
+}
+
+table.list.spaced td {
+    padding: 5px;
+}
+
+table.list.spaced tr > td:last-of-type {
+    width: 50%;
+}
+
+input[type='submit']:disabled {
+    background: darkgray;
+}

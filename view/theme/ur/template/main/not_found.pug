@@ -1,0 +1,25 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+    body
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        section#page-content.page-wrapper.mt-50
+            // SHOP SECTION START
+            .shop-section.mb-80
+                .container
+                    | <? if(isset($flash)): ?>
+                    .row
+                        .alert.alert-danger <?= $flash['content']; ?>
+                    | <? endif; ?>
+                    .row.text-center
+                        .col-md-12.col-sm-12.col-xs-12 
+                            h1 Not found
+                    .row.text-center.mt-100
+                        .col-md-12.col-sm-12.col-xs-12
+                            p The page you've request can't be found. Please proceed to the 
+                                a(href='/') main page.
+            | <?= $footer ?>  
+        

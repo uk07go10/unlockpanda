@@ -1,0 +1,40 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+    body
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        section#page-content.page-wrapper.mt-50
+            .shop-section.mb-80
+                .container
+                    .row
+                        .col-md-12.col-sm-12.col-xs-12
+                            h1 <?= $heading_title; ?>
+                    .row
+                        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            .form-group
+                                label(for='name') <?= $entry_name; ?>
+                                input.form-control.order-input#name(type='text', name='name')
+                            .form-group
+                                label(for='email') <?= $entry_email; ?>
+                                input.form-control.order-input#email(type='text', name='email')
+                            .form-group
+                                label(for='message') <?= $entry_enquiry; ?>
+                                textarea.height-120.form-control#message(name='message', style='border: 1px solid #999')
+                            button.submit-btn-1.mt-20.btn-hover-1#submit(type='submit')
+                                | submit
+                                | message
+
+                        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            ol
+                                li
+                                    a(href='/apply-for-a-refund', style='text-decoration: underline') <?= $text_ques2; ?>
+                                li 
+                                    a(href='/troubleshooting', style='text-decoration: underline') <?= $text_ques3; ?>
+                                li 
+                                    a(href='/index.php?route=main/status', style='text-decoration: underline') <?= $text_ques4; ?>
+                                    
+            | <?= $footer ?>  
+        

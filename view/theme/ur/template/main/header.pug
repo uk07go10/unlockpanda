@@ -1,0 +1,187 @@
+- var base = '/catalog/view/theme/ur/'
+script.
+    $(function () {
+        var hoverInterval = false;
+        
+        $("#cart, #cart-container").hover(function () {
+            if(hoverInterval) {
+                clearTimeout(hoverInterval);
+            }
+            $("#cart-container").show();
+        }, function () {
+            hoverInterval = setTimeout(function () {
+                $("#cart-container").hide();
+            }, 500);
+        });
+    });
+.cart-container#cart-container(style='display: none;')
+    ul
+        li
+            .top-cart-inner.your-cart
+                h5.text-capitalize <?= $cart_cart; ?>
+        | <? if($products_count): ?>
+        li
+            .total-cart-pro
+                | <?php foreach($products as $product): ?>
+                // single-cart
+                .single-cart.clearfix
+                    .cart-img.f-left
+                        a(href='#')
+                            img(src!="<?= $product['thumb']; ?>", alt='Cart Product')
+                    .cart-info.f-left
+                        h6.text-capitalize
+                            a(href='#') <?= $product['name']; ?>
+                        p
+                            span
+                                | Brand
+                                strong :
+                            | <?= $product['category']; ?>
+                        p
+                            span
+                                | IMEI
+                                strong :
+                            | <?= $product['imei']; ?>
+                        p
+                            span
+                                | Price
+                                strong :
+                            | <?= $product['price']; ?>
+                | <? endforeach; ?>
+        | <? endif; ?>
+        li <? if($products_count): ?>
+            .top-cart-inner.subtotal
+                h4.text-uppercase.g-font-2 <?= $cart_total; ?> 
+                    span <?= $currency; ?> <?= $amount ?>
+            | <? else: ?>
+            .top-cart-inner.subtotal
+                h4.text-uppercase.g-font-2 EMPTY
+            | <? endif; ?>
+        li
+            .top-cart-inner.check-out
+                h4.text-uppercase
+                    a(href='index.php?route=main/checkout') <?= $cart_checkout; ?>
+
+.wrapper
+    // START MOBILE MENU AREA
+    .mobile-menu-area.hidden-lg.hidden-md
+        .container
+            .row
+                .col-xs-12
+                    .mobile-menu
+                        nav#dropdown
+                            ul
+                                li
+                                    a(href='/index.php?route=main/home') <?= $menu_home; ?>
+                                li
+                                    a(href='/how-does-it-work') <?= $menu_how_it_works; ?>
+                                li
+                                    a(href='/index.php?route=main/testimonials') <?= $menu_testimonials; ?>
+                                li
+                                    a(href='/index.php?route=main/faq') <?= $menu_faq; ?>
+                                li
+                                    a(href='#') <?= $menu_help; ?>
+                                    ul
+                                        li
+                                            a(href='/code-entry-instructions') <?= $menu_code_entry_instructions; ?>
+                                        li
+                                            a(href='/troubleshooting') <?= $menu_troubleshooting; ?>
+                                li
+                                    a(href='/index.php?route=information/contact') <?= $menu_contact; ?>
+                                li
+                                    .row
+                                        .col-sm-5.col-xs-5
+                                            a.lang-en(style='cursor: pointer; margin-right: 5px; text-align: center;')
+                                                img(src='/image/flags/gb.png')
+                                                
+                                        .col-sm-5.col-xs-5
+                                            a.lang-es(style='cursor: pointer; text-align: center')
+                                                img(src='/image/flags/es.png')
+    // END MOBILE MENU AREA
+    // BREADCRUMBS SETCTION START
+    .slider-area.bg-3.bg-opacity-black-60.dotted-overlay
+        // header-middle-area
+        .header-middle-area.plr-185(style='background-color: #EDEEEF;')
+            .container-fluid
+                .full-width-mega-dropdown
+                    .row
+                        // logo
+                        .col-lg-2.col-md-2.col-sm-6.col-xs-9
+                            .logo
+                                a(href='index.php?route=main/home')
+                                    img(src='/image/data/logo.png', alt='main logo')
+                                    p(style='font-size: 11px; margin-bottom: 0') Quick. Easy. Secure.
+                        // primary-menu
+                        .col-lg-7.col-md-9.hidden-sm.hidden-xs
+                            nav#primary-menu
+                                ul.main-menu.text-center
+                                    li
+                                        a(href='/index.php?route=main/home') <?= $menu_home; ?>
+                                    li
+                                        a(href='/how-it-works') <?= $menu_how_it_works; ?>
+                                    li
+                                        a(href='/index.php?route=main/faq') <?= $menu_faq; ?>
+                                    li
+                                        a(href='#') <?= $menu_help; ?>
+                                        ul.dropdwn
+                                            li
+                                                a(href='/code-entry-instructions') <?= $menu_code_entry_instructions; ?>
+                                            li
+                                                a(href='/troubleshooting') <?= $menu_troubleshooting; ?>
+                                    li
+                                        a(href='/index.php?route=information/contact') <?= $menu_contact; ?>
+                                    li
+                                        a(href='/index.php?route=main/status') <?= $menu_check_order_status; ?>
+                                    li
+                                        span.lang-en(style='cursor: pointer; margin-right: 5px;')
+                                            img(src='/image/flags/gb.png')
+                                        span.lang-es(style='cursor: pointer;')
+                                            img(src='/image/flags/es.png')
+                        // header-search & total-cart
+                        .col-lg-3.col-md-1.col-sm-6.col-xs-3
+                            .search-top-cart.f-right
+                                // total-cart
+                                .total-cart.f-left
+                                    .total-cart-in
+                                        .cart-toggler#cart
+                                            a.no-hover(href='#', style='color: white')
+                                                img(src='catalog/view/theme/unlock/image/bag.png')
+                                                br
+                                                span.cart-quantity 0<?= $products_count ?>
+                                                
+        // START HEADER AREA
+        header.header-area.header-wrapper
+            | <?php $dt = new DateTime('America/Los_Angeles');
+            | $dt_format = $dt->format('d-m');
+            | $special_occasion = (in_array($dt_format, array('25-11', '26-11', '27-11')) ? true: false);
+            | ?>
+        
+            | <?php if($special_occasion) { ?>
+            | <?php if($this->session->data['language'] == 'en') { ?>
+            .ptb-30
+                .text-center
+                    img.img-responsive(src='/image/panda_thanksgiving_en.png', style='margin: 0 auto;')
+            | <?php } else { ?>
+            .ptb-30
+                .text-center
+                    img.img-responsive(src='/image/panda_thanksgiving_es.png', style='margin: 0 auto;')
+            | <?php } ?>
+            | <?php } ?>
+            | <?php 
+            | $special_occasion = (in_array($dt_format, array('02-12')) ? false: false);
+            | ?>
+    
+            | <?php if($special_occasion) { ?>
+            | <?php if($this->session->data['language'] == 'en') { ?>
+            .ptb-30
+                .text-center
+                    img.img-responsive(src='/image/cybermonday_18.png', style='margin: 0 auto;')
+            | <?php } else { ?>
+            .ptb-30
+                .text-center
+                    img.img-responsive(src='/image/cybermonday_18.png', style='margin: 0 auto;')
+            | <?php } ?>
+            | <?php } ?>
+            block header_addition
+
+        // END HEADER AREA
+        

@@ -1,0 +1,489 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-container {
+    max-width: 1360px;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.custom-flex-row {
+    display: flex;
+}
+
+.custom-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.relative {
+    position: relative;
+}
+
+.bottom-desc-section {
+    background: #FAFAFA;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+}
+
+.bottom-desc-row {
+    width: 100%;
+    max-width: 1360px;
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+    font-family: Inter;
+}
+
+.bottom-desc-title {
+    color: #061434;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 1.32px;
+    text-transform: capitalize;
+    max-width: 500px;
+    margin: 0;
+    position: relative;
+}
+
+.bottom-desc-title img {
+    position: absolute;
+    right: 20px;
+    bottom: -50px;
+}
+
+.bottom-desc-right {
+    flex: 1;
+}
+
+.bottom-desc-right p {
+    color: #061434;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 56px;
+}
+
+.info-box {
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+}
+
+.info-box:has(> .accordion.active) {
+    border: 1px solid #6A5696;
+}
+
+.accordion img {
+    transition-duration: 0.4s;
+}
+
+.accordion.active img {
+    transform: rotate(180deg);
+    transition-duration: 0.4s;
+}
+
+.panel {
+    display: none;
+}
+
+.info-title {
+    color: #170F49;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0;
+}
+
+.info-title span {
+    color: #C90000;
+}
+
+.info-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    color: #737373;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.select-with-icon {
+    display: flex;
+    align-items: center;
+    border-radius: 41px;
+    background: #F6F6F6;
+    position: relative;
+    height: 60px;
+}
+
+.select2-container {
+    flex: 1;
+    width: auto !important;
+    padding-left: 60px !important;
+    font-family: Inter;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    display: none;
+}
+
+.select2-container--open .select2-dropdown--below {
+    margin-top: 20px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 24px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-width: 8px 6px 0 6px !important;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-width: 0 6px 8px 6px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #555 !important;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.input-icons {
+    padding-right: 8px;
+    border-right: 1px solid #00000033;
+    position: absolute;
+    left: 24px;
+}
+
+.custom-dropdown select {
+    flex: 1;
+    cursor: pointer;
+    height: 68px;
+    border: 0;
+    background: transparent;
+    padding-left: 70px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    z-index: 10;
+
+    color: #555;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.custom-dropdown select:focus {
+    outline: none;
+}
+
+.custom-dropdown .dropdown-arrow {
+    position: absolute;
+    right: 24px;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    border-radius: 41px;
+    background: #F6F6F6;
+    padding: 22px 24px;
+}
+
+.input-with-icon .input-icons {
+    padding-right: 8px;
+    border-right: 1px solid #00000033;
+    position: initial;
+}
+
+.input-with-icon .custom-input {
+    flex: 1;
+    padding-left: 12px;
+
+    color: #555;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+    border: 0;
+    background: transparent;
+}
+
+.input-with-icon .custom-input:focus {
+    outline: none;
+}
+
+.phone-input-dropdown {
+    border-right: 1px solid #00000033;
+    gap: 4px;
+    padding-right: 4px;
+}
+
+.phone-input-dropdown .input-icons {
+    border: 0;
+    padding: 0;
+}
+
+.form-submit-btn {
+    border-radius: 42px;
+    background: #C90000;
+    padding: 28px 32px;
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 105%;
+    margin-top: 14px;
+    border: 0;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@media (max-width: 1400px) {
+    .page-container {
+        max-width: none;
+        padding: 0 40px;
+        padding-top: 100px;
+    }
+
+    .bottom-desc-row {
+        max-width: none;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-size: 16px;
+    }
+
+    .custom-dropdown select,
+    .input-with-icon {
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .input-with-icon .custom-input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 970px) {
+    .bottom-desc-row {
+        flex-direction: column;
+    }
+
+    .bottom-desc-title {
+        max-width: none;
+        width: 100%;
+    }
+
+    .bottom-desc-title img {
+        display: none;
+    }
+}
+
+@media (max-width: 957px) {
+    .form-submit-btn {
+        padding: 20px 32px;
+        font-size: 16px;
+    }
+
+    .bottom-desc-row {
+        padding: 0 20px;
+    }
+
+    .page-container {
+        padding: 75px 20px 0 20px;
+    }
+
+    .info-box {
+        padding: 16px 18px;
+        gap: 20px;
+    }
+
+    .info-box .panel {
+        margin-top: 0;
+    }
+
+    .info-title {
+        font-size: 18px;
+    }
+
+    .info-list {
+        font-size: 14px;
+    }
+
+    .accordion img {
+        width: 25px;
+    }
+
+    .bottom-desc-section {
+        margin-top: 60px;
+        padding: 30px 0;
+    }
+
+    .bottom-desc-title {
+        font-size: 32px;
+    }
+
+    .bottom-desc-row {
+        gap: 24px;
+    }
+
+    .bottom-desc-right p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+}
+
+@keyframes dropdown-menu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.navigation-offset-container {
+    margin-top: 80px;
+}
+
+.contact-section {
+    margin-top: 170px;
+    font-family: Inter;
+}
+
+.contact-title {
+    color: #001637;
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 147.5%;
+    margin: 0;
+}
+
+.check-order-status-section {
+    margin-top: 170px;
+    font-family: Inter;
+}
+
+.check-order-status-title {
+    color: #001637;
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 147.5%;
+    margin: 0;
+}
+
+.information-section {
+    margin-top: 170px;
+    font-family: Inter;
+}
+
+@media (max-width: 1130px) {
+    .contact-title {
+        font-size: 50px;
+    }
+
+    .check-order-status-title {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 957px) {
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .check-order-status-title {
+        font-size: 32px;
+    }
+}

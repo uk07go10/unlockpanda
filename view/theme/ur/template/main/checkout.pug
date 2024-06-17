@@ -1,0 +1,143 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+        script.
+            fbq('track', 'AddToCart');
+    body
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        section#page-content.page-wrapper.mt-50
+            // SHOP SECTION START
+            .shop-section.mb-80
+                .container
+                    h2 <?= $text_new_order_detail; ?>
+                    //ul.cart-tab.row.mb-80
+                    //    li.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                    //        a.active(href='#' onclick='return false;', style='cursor: default;')
+                    //            span 1
+                    //            | <?= $breadcrumbs_step_1; ?>
+                    //    li.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                    //        a.active(href='#', onclick='return false;', style='cursor: default;')
+                    //            span 2
+                    //            | <?= $breadcrumbs_step_2; ?>
+                    //    li.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                    //        a(href='#', onclick='return false;', style='cursor: default;')
+                    //            span 3
+                    //            | <?= $breadcrumbs_step_3; ?>
+                    | <? foreach($products as $product): ?>
+                    | <? if($flash): ?>
+                    .row
+                        .alert.alert-danger <?= $flash['content']; ?>
+                    | <? endif; ?>
+                    .row
+                        .col-md-5.col-sm-12.col-xs-12
+                            .row
+                                .col-md-12
+                                    p.mb-0 
+                                        b <?= $details_order; ?>
+                                            u <?= $product['name']; ?>
+                                    p.mb-0 <?= $details_imei; ?> <?= $product['imei']; ?>
+                                    p.mb-0 <?= $details_carrier; ?> <?= $product['carrier']; ?>
+                            .row.mt-10
+                                .col-md-4.col-sm-4
+                                    img(src!="<?= $product['thumb']; ?>", alt='')
+                                .col-md-8.col-sm-8
+                                    h2.label.label-success.p-10
+                                        i.zmdi.zmdi-time-countdown.mr-5
+                                        | <?= $details_delivery_time; ?> <?= $product['delivery_time']; ?>
+                                    p.mt-10.mb-0 <?= $details_competitors_price; ?> <?= $product['competitors_price']; ?>
+                                    p.mb-0 <?= $details_save_price; ?> <?= $product['save']; ?>
+                                    p.mb-0 <?= $details_our_price; ?> 
+                                        b US$<?= $product['total']; ?>
+                                    p.mt-10
+                                        a.text-danger(href!="<?= $product['remove']; ?>") <?= $details_remove; ?>
+                        .col-md-7.col-sm-12.col-xs-12#product-description(style='color: #434343')
+                            p.hidden-lg.hidden-md <?= $product['description']; ?>
+
+
+                    .row
+                        .col-md-12
+                            hr
+                    | <? endforeach; ?>
+                    
+                    // .row.row-equal-height.mt-50
+                        .col-lg-4.col-md-4.col-sm-12.col-xs-12.text-center
+                            .well
+                                h1 <?= $hero_box_1_header; ?>
+                                p <?= $hero_box_1_content; ?>
+                        .col-lg-4.col-md-4.col-sm-12.col-xs-12.text-center
+                            .well
+                                h1 <?= $hero_box_2_header; ?>
+                                p <?= $hero_box_2_content; ?>
+                        .col-lg-4.col-md-4.col-sm-12.col-xs-12.text-center
+                            .well
+                                h1 <?= $hero_box_3_header; ?>
+                                p <?= $hero_box_3_content; ?>
+                    .row.mt-50
+                        .col-md-8
+                            .box-shadow.p-30#risk-free-policy
+                                h2.widget-title.border-left.mb-20 <?= $risk_free_header; ?>
+                                p 
+                                    strong <?= $risk_free_subheader; ?>
+                                ul
+                                    li <?= $risk_free_list_1; ?>
+                                    li <?= $risk_free_list_2; ?>
+                                    li <?= $risk_free_list_3; ?>
+                                    li <?= $risk_free_list_4; ?>
+                                    li <?= $risk_free_list_5; ?>
+                                    li <?= $risk_free_list_6; ?>
+                                    li <?= $risk_free_list_7; ?>
+                                    li <?= $risk_free_list_8; ?>
+                        .col-md-4
+                            .row
+                                .col-md-12
+                                    .coupon-discount.box-shadow.p-30.mb-20
+                                        h6.widget-title.border-left.mb-20 <?= $coupon_header; ?>
+                                        p <?= $coupon_description; ?>
+                                        p.text-danger#coupon-error
+                                        input#coupon(type='text', name='name', placeholder!='<?= $coupon_placeholder; ?>.')
+                                        button.submit-btn-1.black-bg.btn-hover-2#button-coupon(type='submit') <?= $coupon_button; ?>
+                            .row
+                                .col-md-12
+                                    .row
+                                        .col-md-12
+                                            .payment-details.box-shadow.p-30.mb-20
+                                                h6.widget-title.border-left.mb-20 <?= $payment_header; ?>
+                                                table
+                                                    tbody <? foreach($totals as $total): ?>
+                                                        tr
+                                                            td.td-title-1 <?= $total['title']; ?>
+                                                            td.td-title-2 <?= $total['text']; ?>
+                                                    | <? endforeach; ?>
+                                                // shopping-cart end
+                                                .row
+                                                    .col-md-12
+                                                        // Modal
+                                                        #terms-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+                                                            .modal-dialog(role='document')
+                                                                .modal-content.p-20
+                                                                    p Loading..
+
+                                                        .checkbox
+                                                            label
+                                                                input.mt-5#terms-agree(type='checkbox') 
+                                                                | <?= $text_agree ?> 
+                                                                a(style='text-decoration: underline', href='index.php?route=information/information/info&information_id=5', data-toggle='modal', data-target='#terms-modal') <?= $text_terms ?>
+                                                                
+                                                .row.text-center#loading(style='display:none;')
+                                                    p 
+                                                        i.zmdi.zmdi-spinner.spin.mr-10 
+                                                        | Loading, please wait..
+                                                .row.text-center
+                                                    .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center
+                                                        | <?= $stripe_new ?>
+                                                    // .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center.mt-5
+                                                        p.mt-0.mb-0 or
+                                                    // .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center.mt-5
+                                                        | <?= $paypal_express_new ?>
+
+            // SHOP SECTION END
+            | <?= $footer ?>  
+        

@@ -1,0 +1,75 @@
+<meta charset="utf-8"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge"/><title><?= $title; ?></title>
+<meta name="description" content="<?= $description; ?>"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8"/>
+<meta property="og:title" content="<?= $title?>"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://www.unlockpanda.com/image/quick_safe_legal.png"/>
+<meta name="description" content="<?= $description; ?>"/>
+<meta property="og:description" content="<?= $description; ?>"/><!-- TradeDoubler site verification 2992701-->
+<script data-ad-client="ca-pub-3159669844652381" async=""
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>// fix for some Samsung devices
+    Function.prototype.ToString = function () {
+        return this.toString();
+    }
+    var language = '<?= $language ?>';
+    var lessModelsWarningCarriers =
+        <?= (isset($config_less_models) && is_string($config_less_models) && strlen($config_less_models) > 0 ? "'".addslashes($config_less_models). "'.split(',')" : "[]");
+        ?
+    >
+    ;
+</script>
+<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js"
+        data-apikey="ef8ae71c1cc292dd3c6cf46ca59ee217"></script><!-- Favicon-->
+<link rel="shortcut icon" type="image/x-icon"
+      href="https://www.unlockpanda.com/image/data/favicon.png"/><!-- All CSS Files--><!-- Bootstrap fremwork main css-->
+<link rel="stylesheet" href="/catalog/view/theme/ur/css/bootstrap.min.css"/><!-- Nivo-slider css-->
+<link rel="stylesheet"
+      href="/catalog/view/theme/ur/lib/css/nivo-slider.css"/><!-- This core.css file contents all plugings css file.-->
+<link rel="stylesheet" href="/catalog/view/theme/ur/css/core.css"/><!-- Theme shortcodes/elements style-->
+<link rel="stylesheet" href="/catalog/view/theme/ur/css/shortcode/shortcodes.css"/><!-- Theme main style-->
+<link rel="stylesheet" href="/catalog/view/theme/ur/css/style.css"/><!-- Responsive css-->
+<link rel="stylesheet" href="/catalog/view/theme/ur/css/responsive.css"/><!-- Template color css-->
+<link href="/catalog/view/theme/ur/css/color/color-core.css" data-style="styles" rel="stylesheet"/><!-- User style-->
+<link rel="stylesheet" href="/catalog/view/theme/ur/css/custom.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/><!-- Modernizr JS-->
+<script src="/catalog/view/theme/ur/js/vendor/modernizr-2.8.3.min.js"></script><!-- TrustBox script-->
+<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+        async=""></script><!-- End Trustbox script--><!-- jquery latest version-->
+<script src="/catalog/view/theme/ur/js/vendor/jquery-3.1.1.min.js"></script>
+<script>(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-36259035-1', 'auto');
+    ga('send', 'pageview');
+</script><!-- Start of unlockpandasupport Zendesk Widget script-->
+<script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=d909995e-ef56-4242-a4cd-79c2b7cf18a7"></script><!-- End of unlockpandasupport Zendesk Widget script-->
+<script type="text/javscript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+        async=""></script><!-- Facebook Pixel Code-->
+<script>!function (f, b, e, v, n, t, s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '605819516816526');
+    fbq('track', 'PageView');</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=605819516816526&amp;ev=PageView&amp;noscript=1"/>
+</noscript><!-- End Facebook Pixel Code-->

@@ -1,0 +1,258 @@
+- var base = '/catalog/view/theme/ur/'
+    
+footer#footer.footer-area
+    .footer-top
+        .container-fluid
+            
+                .footer-top-inner.gray-bg
+                    .row
+                        .col-lg-2.col-md-5.col-sm-4
+                            .single-footer.footer-about
+                                .footer-brief
+                                    img(src='image/unlock/f-logo.png', height='115')
+                                ul.footer-social
+                                    li
+                                        a.facebook(href='https://www.facebook.com/UnlockPanda', title='Facebook')
+                                            i.zmdi.zmdi-facebook
+                                    //li
+                                    //    a.google-plus(href='https://plus.google.com/u/0/b/117821364857551097551/117821364857551097551/about', title='Google Plus')
+                                    //        i.zmdi.zmdi-google-plus
+                                    //li
+                                    //    a.twitter(href='https://twitter.com/RiverUnlock', title='Twitter')
+                                    //        i.zmdi.zmdi-twitter
+                                    li
+                                        a.rss(href='', title='RSS')
+                                            i.zmdi.zmdi-rss
+                        .col-lg-2.hidden-md.hidden-sm
+                            .single-footer
+                                h4.footer-title.border-left Most popular
+                                ul.footer-menu
+                                    | <? foreach($most_popular as $item) { ?>
+                                    li
+                                        a(href!='<?= $item["url"] ?>')
+                                            span <?= $item["name"] ?>
+                                    | <? } ?>
+                        .col-lg-2.hidden-md.hidden-sm
+                            .single-footer
+                                h4.footer-title.border-left <?= $quick_links_header; ?>
+                                ul.footer-menu
+                                    li
+                                        a(href='index.php?route=main/status')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_check_order_status; ?>
+                                    li
+                                        a(href='/about-us')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_about_us; ?>
+                                    li
+                                        a(href='/how-it-works')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_how_it_works; ?>
+                                    li
+                                        a(href='/terms-conditions')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_terms_and_conditions; ?>
+                                    li
+                                        a(href='/privacy-policy')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_privacy_policy; ?>
+                                    li
+                                        a(href='/refund-policy')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_refund_policy; ?>
+                                    li
+                                        a(href='/delivery-policy')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_delivery_policy; ?>
+                        .col-lg-2.col-md-3.col-sm-4
+                            .single-footer
+                                h4.footer-title.border-left <?= $support_header; ?>
+                                ul.footer-menu
+                                    li
+                                        a(href='/code-entry-instructions')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_code_entry_instructions; ?>
+                                    li
+                                        a(href='/troubleshooting')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_troubleshooting; ?>
+                                    li
+                                        a(href='/apply-for-a-refund')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_apply_for_a_refund; ?>
+                                    li
+                                        a(href='/cdma-carriers')
+                                            i.zmdi.zmdi-circle
+                                            span <?= $link_cdma_carriers; ?>
+                                            
+
+                        .col-lg-4.col-md-4.col-sm-4
+                            .single-footer
+                                h4.footer-title.border-left <?= $message_header; ?>
+                                .footer-message#message-input
+                                    form(action='#')
+                                        input#contact-name(type='text', name='name', placeholder!='<?= $message_name; ?>...')
+                                        input#contact-email(type='text', name='email', placeholder!='<?= $message_email; ?>')
+                                        textarea.height-80#contact-message(name='message', placeholder!='<?= $message_message; ?>...')
+                                        button.submit-btn-1.mt-20.btn-hover-1#message-submit(type='submit')
+                                            | submit
+                                            | message
+                                .footer-message#message-sent(style='display:none')
+                                    h5 <?= $message_thank_you; ?>
+                    .row.mt-30(style='color: #666') <?= $legal_disclaimer; ?>
+    .footer-bottom.grayish-bh
+        .container-fluid
+            
+                .copyright
+                    .row
+                        .col-sm-6.col-xs-12
+                            .copyright-text
+                                p
+                                    | ©
+                                    a(href='https://www.unlockpanda.com', target='_blank') UnlockPanda.com
+                                    |  2018. All Rights Reserved.
+                        .col-sm-6.col-xs-12
+                            ul.footer-payment.text-right
+                                li
+                                    a(href='#')
+                                        img(src=base + 'img/payment/2.jpg', alt='')
+                                li
+                                    a(href='#')
+                                        img(src=base + 'img/payment/3.jpg', alt='')
+                                li
+                                    a(href='#')
+                                        img(src=base + 'img/payment/4.jpg', alt='')
+// END FOOTER AREA
+// START QUICKVIEW PRODUCT
+#quickview-wrapper
+    // Modal
+    #productModal.modal.fade(tabindex='-1', role='dialog')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    .modal-product.clearfix
+                        .product-images
+                            .main-image.images
+                                img(alt='', src=base + 'img/product/quickview.jpg')
+                        // .product-images
+                        .product-info
+                            h1 Aenean eu tristique
+                            .price-box-3
+                                .s-price-box
+                                    span.new-price £160.00
+                                    span.old-price £190.00
+                            a.see-all(href='single-product-left-sidebar.html') See all features
+                            .quick-add-to-cart
+                                form.cart(method='post')
+                                    .numbers-row
+                                        input#french-hens(type='number', value='3')
+                                    button.single_add_to_cart_button(type='submit') Add to cart
+                            .quick-desc
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est
+                                | tristique auctor. Donec non est at libero.
+                            .social-sharing
+                                .widget.widget_socialsharing_widget
+                                    h3.widget-title-modal Share this product
+                                    ul.social-icons.clearfix
+                                        li
+                                            a.facebook(href='#', target='_blank', title='Facebook')
+                                                i.zmdi.zmdi-facebook
+                                        li
+                                            a.google-plus(href='#', target='_blank', title='Google +')
+                                                i.zmdi.zmdi-google-plus
+                                        li
+                                            a.twitter(href='#', target='_blank', title='Twitter')
+                                                i.zmdi.zmdi-twitter
+                                        li
+                                            a.pinterest(href='#', target='_blank', title='Pinterest')
+                                                i.zmdi.zmdi-pinterest
+                                        li
+                                            a.rss(href='#', target='_blank', title='RSS')
+                                                i.zmd
+                // .modal-body
+            // .modal-content
+        // .modal-dialog
+    // END Modal
+// END QUICKVIEW PRODUCT
+// Body main wrapper end
+// Placed JS at the end of the document so the pages load faster
+// Bootstrap framework js
+    
+link(rel='stylesheet', href=base + 'js/vendor/sweetalert/sweetalert.css')
+script(src=base + 'js/vendor/sweetalert/sweetalert.min.js')
+script(src=base + 'js/bootstrap.min.js')
+// jquery.nivo.slider js
+script(src=base + 'lib/js/jquery.nivo.slider.js')
+// All js plugins included in this file.
+script(src=base + 'js/plugins.js')
+| <?php foreach ($scripts as $script) { ?>
+script(type='text/javascript', src!="<?= $script; ?>")
+| <?php } ?>
+| <?php foreach ($styles as $style) { ?>
+link(rel!="<?= $style['rel']; ?>", type="text/css", href!="<?= $style['href']; ?>", media!="<?= $style['media']; ?>")
+| <?php } ?>
+
+script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js')
+script(src='//fast.wistia.net/assets/external/E-v1.js', async='')
+script.
+    $(function() {
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            focusOnSelect: true,
+            prevArrow: $('#testimonials-prev'),
+            nextArrow: $('#testimonials-next'),
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+        $('.slider-nav').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            console.log(nextSlide);
+            $('#testimonial-' + currentSlide).get(0).pause();
+            $('#testimonial-' + nextSlide).get(0).play();
+        }); 
+    });
+#fb-root
+script.
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.10&appId=562515193810767";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+// Main js file that contents all jQuery plugins activation.
+script(src=base + 'js/main.js')

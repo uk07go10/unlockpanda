@@ -1,0 +1,879 @@
+.horizontal-frame {
+    background: #000;
+    margin-top: 112px;
+    width: 100%;
+}
+
+.horizontal-frame-main {
+    gap: 40px;
+    width: 100%;
+    padding: 48px 0;
+}
+
+.guarantee-item {
+    gap: 40px;
+}
+
+.guarantee-item p {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.guarantee-item span {
+    font-weight: 700;
+}
+
+.how-work-section {
+    width: 100%;
+    max-width: 1360px;
+    margin-top: 120px;
+    font-family: Inter;
+}
+
+.how-work-title {
+    color: #001637;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 147.5%;
+    margin: 0;
+}
+
+.how-work-row {
+    gap: 24px;
+    margin-top: 14px;
+}
+
+.how-work-item-cover {
+    width: 411px;
+    height: 413px;
+}
+
+.how-work-item-info {
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: -80px;
+}
+
+.order-number {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 100%;
+    background-color: #CC1A1A;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.how-work-item-title {
+    color: #1D2538;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    margin: 0;
+}
+
+.how-work-item-desc {
+    color: #273150BF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+    margin-top: 16px;
+}
+
+.why-choose-section {
+    margin-top: 120px;
+    padding-top: 120px;
+    background: #FAFAFA;
+    width: 100%;
+    position: relative;
+    font-family: Inter;
+}
+
+.ellipse2 {
+    position: absolute;
+    right: 590px;
+    top: 88px;
+}
+
+.ellipse1 {
+    position: absolute;
+    right: 190px;
+    bottom: 116px;
+}
+
+.why-choose-container {
+    width: 100%;
+    max-width: 1360px;
+}
+
+.why-choose-cover {
+    margin-bottom: -90px;
+    margin-left: -40px;
+}
+
+.why-choose-title {
+    color: #001F44;
+    font-size: 53px;
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0;
+}
+
+.why-choose-desc {
+    color: #425466BF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 32px 0;
+}
+
+.learn-more-button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    gap: 10px;
+
+    color: #287CDE;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29.5px;
+}
+
+.testimonial-section {
+    margin-top: 120px;
+    width: 100%;
+    font-family: Inter;
+    font-weight: 500;
+    color: #00000099;
+    max-width: 1360px;
+}
+
+.testimonial-section span {
+    color: #090909;
+    font-weight: 700;
+}
+
+.testimonial-title {
+    font-size: 56px;
+    margin: 0;
+    text-align: center;
+}
+
+.testimonial-desc {
+    font-size: 48px;
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.trustpilot-testimonial-container {
+    gap: 24px;
+}
+
+.trustpilot-logo-section {
+    padding: 30px 24px;
+    background: #0F291D;
+    box-shadow: 40px 28px 80px 0px rgba(0, 0, 0, 0.08);
+    font-family: Inter;
+    gap: 20px;
+    max-width: 344px;
+    align-items: flex-start;
+}
+
+.testimonial-score-title {
+    color: #EBF1F5;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0;
+}
+
+.testimonial-score-desc {
+    color: #EBF1F5;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 0;
+}
+
+.testimonial-score-desc strong {
+    text-decoration: underline;
+}
+
+.check-reviews-btn {
+    padding: 16px 52px;
+    border-radius: 6px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(35px);
+    cursor: pointer;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.testimonials-wrapper {
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    padding: 20px;
+    background: #FBFBFB;
+    gap: 18px;
+    width: 48%;
+}
+
+.testimonial-user-info-row {
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.testimonial-user-avatar {
+    width: 57px;
+    height: 57px;
+}
+
+.testimonial-user-name {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+    text-align: left;
+}
+
+.testimonial-user-location {
+    color: #7B7B7B;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%;
+    margin: 0;
+    margin-top: 11px;
+}
+
+.user-review-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+}
+
+.user-review-desc {
+    color: #878787;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+}
+
+.testimonial-date {
+    color: #6A6A6A;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 120%;
+    margin: 0;
+}
+
+.faq-section {
+    margin-top: 170px;
+    font-family: Inter;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 1360px;
+}
+
+.faq-title {
+    color: #001637;
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 147.5%;
+    margin: 0;
+}
+
+.faq-desc {
+    color: #00000099;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.faq-chat {
+    color: #00000099;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 24px;
+}
+
+.faq-chat span {
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-arrow {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    top: 20px;
+}
+
+.faq-chat-img {
+    margin-top: 59px;
+}
+
+.faq-right {
+    padding-top: 140px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.load-more-btn {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 50px;
+    margin-top: 16px;
+
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cable-unlock-info-section {
+    margin-top: 99px;
+    font-family: Inter;
+}
+
+.cable-unlock-info-container {
+    max-width: 1360px;
+    gap: 50px;
+}
+
+.cable-unlock-info-title {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cable-unlock-info-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.cable-unlock-info-list .list-order {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #CC1A1A;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 120%;
+    border-radius: 100%;
+}
+
+.cable-unlock-info-list .list-detail {
+    color: #696969;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.96px;
+    margin: 0;
+    margin-left: 16px;
+}
+
+.unlock-hero {
+    margin-top: 172px;
+    font-family: Inter;
+}
+
+.unlock-hero-container {
+    max-width: 1360px;
+    gap: 50px;
+}
+
+.imei-unlock-hero-title {
+    color: #1A1A1A;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+}
+
+.imei-unlock-hero-title .title-arrow {
+    position: absolute;
+    bottom: -130px;
+    right: -70px;
+}
+
+.imei-unlock-hero-desc {
+    color: #818181;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 40px 0;
+}
+
+.lock-status-check-btn {
+    padding: 28px 32px;
+    border-radius: 39px;
+    background: #FDF4F4;
+    border: 0;
+
+    color: #C90000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 105%;
+}
+
+.unlock-hero-left {
+    max-width: 630px;
+}
+
+.unlock-hero-left.cable-unlock {
+    padding-right: 45px;
+    border-right: 1px solid #D7D7D7;
+}
+
+.cable-unlock-hero-title {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cable-unlock-hero-desc {
+    color: #818181;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 32px 0;
+}
+
+.cable-unlock-hero-highlight {
+    color: #323232;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 0;
+}
+
+.imei-unlock-form {
+    border: 20px solid #F4E8E8;
+    border-radius: 12px;
+    padding: 32px;
+    flex: 1;
+    gap: 18px;
+}
+
+.cable-unlock-form {
+    flex: 1;
+    gap: 18px;
+}
+
+.form-highlight-arrow {
+    position: absolute;
+    top: -30px;
+    right: -75px;
+}
+
+.supported-highlight {
+    color: #555;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+@media (max-width: 1400px) {
+    .unlock-hero-container, 
+    .how-work-section, 
+    .faq-container,
+    .testimonial-section,
+    .cable-unlock-info-container {
+        max-width: none;
+        padding: 0 40px;
+    }
+
+    .how-work-item-cover {
+        width: 100%;
+    }
+
+    .unlock-hero-left {
+        max-width: 500px;
+    }
+
+    .imei-unlock-hero-title {
+        font-size: 60px;
+    }
+
+    .form-highlight-arrow {
+        right: -50px;
+    }
+
+    .why-choose-container {
+        max-width: none;
+        padding: 0 40px;
+    }
+
+    .why-choose-cover {
+        width: 55%;
+    }
+
+    .why-choose-section {
+        padding-bottom: 40px;
+    }
+
+    .why-choose-title {
+        font-size: 40px;
+    }
+
+    .why-choose-desc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .unlock-hero-left {
+        max-width: 400px;
+    }
+
+    .imei-unlock-form {
+        padding: 20px;
+    }
+
+    .imei-unlock-hero-title {
+        font-size: 50px;
+    }
+
+    .imei-unlock-hero-title .title-arrow {
+        bottom: -85px;
+        right: -45px;
+        width: 165px;
+    }
+
+    .imei-unlock-hero-desc {
+        font-size: 20px;
+    }
+
+    .lock-status-check-btn {
+        font-size: 18px;
+        padding: 20px 25px;
+    }
+
+    .faq-title {
+        font-size: 50px;
+    }
+
+    .faq-desc {
+        font-size: 20px;
+    }
+
+    .faq-chat {
+        font-size: 28px;
+    }
+
+    .faq-container {
+        gap: 20px;
+    }
+
+    .testimonial-title {
+        font-size: 40px;
+    }
+
+    .testimonial-desc {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .cable-unlock-info-container img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 957px) {
+    .imei-unlock-hero-title {
+        font-size: 32px;
+    }
+
+    .unlock-hero-container {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0;
+    }
+
+    .imei-unlock-hero-title .title-arrow {
+        display: none;
+    }
+
+    .unlock-hero-left {
+        max-width: none;
+        padding: 0 20px;
+    }
+
+    .imei-unlock-hero-desc {
+        margin: 24px 0;
+    }
+
+    .unlock-hero {
+        margin-top: 120px;
+        overflow: hidden;
+    }
+
+    .lock-status-check-btn {
+        display: none;
+    }
+
+    .imei-unlock-form {
+        width: 100%;
+        border-width: 17px;
+    }
+
+    .form-highlight-arrow {
+        display: none;
+    }
+
+    .horizontal-frame {
+        margin-top: 26px;
+    }
+    
+    .horizontal-frame-main {
+        padding: 24px 0;
+        gap: 16px;
+    }
+
+    .guarantee-item {
+        gap: 16px;
+    }
+
+    .guarantee-item p {
+        font-size: 16px;
+    }
+
+    .how-work-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how-work-title {
+        font-size: 32px;
+    }
+
+    .how-work-section {
+        margin-top: 56px;
+        padding: 0 20px;
+    }
+
+    .order-number {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        font-size: 16px;
+    }
+
+    .how-work-item-title {
+        font-size: 24px;
+    }
+
+    .how-work-item-desc {
+        margin-top: 12px;
+    }
+
+    .how-work-item-cover {
+        margin-left: 20px;
+    }
+
+    .why-choose-section {
+        padding-top: 48px;
+    }
+    
+    .why-choose-container {
+        flex-direction: column-reverse;
+        padding: 0 20px;
+        align-items: flex-start;
+    }
+
+    .why-choose-title {
+        font-size: 32px;
+    }
+
+    .why-choose-desc {
+        font-size: 16px;
+        margin: 24px 0;
+    }
+
+    .why-choose-cover {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 428px;
+        margin-left: -20px;
+        z-index: 10;
+    }
+
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-section {
+        margin-top: 72px;
+    }
+
+    .faq-title {
+        font-size: 32px;
+    }
+
+    .faq-desc,
+    .faq-chat,
+    .faq-chat-img {
+        display: none;
+    }
+
+    .faq-right {
+        padding-top: 0;
+    }
+
+    .info-title {
+        font-size: 20px;
+    }
+
+    .faq-container {
+        padding: 0 20px;
+    }
+
+    .load-more-btn {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .bottom-desc-section {
+        margin-top: 56px;
+    }
+
+    .trustpilot-testimonial-container {
+        flex-direction: column;
+    }
+
+    .trustpilot-logo-section {
+        max-width: none;
+        width: 100%;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+
+    .testimonial-section {
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+
+    .testimonial-title {
+        font-size: 24px;
+    }
+
+    .testimonial-desc {
+        font-size: 14px;
+    }
+
+    .unlock-hero-left.cable-unlock {
+        max-width: none;
+        width: 100%;
+        border-right: 0;
+        padding: 0;
+        padding: 0 20px;
+    }
+
+    .cable-unlock-form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .cable-unlock-hero-title {
+        font-size: 32px;
+    }
+
+    .cable-unlock-hero-desc {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .cable-unlock-hero-highlight {
+        font-size: 18px;
+    }
+
+    .cable-unlock-info-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .cable-unlock-info-container img {
+        width: 100%;
+    }
+
+    .cable-unlock-info-title {
+        font-size: 32px;
+    }
+
+    .cable-unlock-info-section {
+        margin-top: 56px;
+    }
+
+    .cable-unlock-info-list {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .cable-unlock-info-list .list-detail {
+        font-size: 18px;
+    }
+
+    .why-choose-section {
+        margin-top: 40px;
+    }
+
+    .supported-highlight {
+        font-size: 16px;
+    }
+}

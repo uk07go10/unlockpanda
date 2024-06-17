@@ -1,0 +1,87 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+    body
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        // Start page content
+        section#page-content.page-wrapper(style='background-color: #FDFBF4')
+            .container
+                .row
+                    .col-md-12.text-center
+                        hr
+                        h1.huge <?= $text_unlock_your_phone; ?>
+                        p <?= $text_unlock_your_phone_subheader; ?>
+                .row.text-center.mt-50
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-12
+                        img.img-responsive(style='margin: 0 auto; height: 100px', src='image/how_it_works/clipboard.png')
+                        h3.mt-10
+                            span.colored 1.
+                            |  <?= $text_step_1; ?>
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-12
+                        img.img-responsive(style='margin: 0 auto; height: 100px;', src='image/how_it_works/credit_card.png')
+                        h3.mt-10
+                            span.colored 2.
+                            |  <?= $text_step_2; ?>
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-12
+                        img.img-responsive(style='margin: 0 auto; height: 100px;', src='image/how_it_works/mail.png')
+                        h3.mt-10
+                            span.colored 3.
+                            |  <?= $text_step_3; ?>
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-12
+                        img.img-responsive(style='margin: 0 auto; height: 100px;', src='image/how_it_works/phone.png')
+                        h3.mt-10
+                            span.colored 4.
+                            |  <?= $text_step_4; ?>
+                        
+                .row.mt-50.mb-50
+                    .col-md-12.text-center
+                        .fb-page(data-href='https://www.facebook.com/UnlockPanda/', data-width='1170', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+                            blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/unlockriver/')
+                                a(href='https://www.facebook.com/UnlockPanda/') UnlockPanda
+        section#page-content-2.page-wrapper.grayish-bg
+            .container
+                .row.mt-50
+                    .col-md-12.text-center
+                        h1.huge <?= $text_clients_write; ?>
+                .row.mt-50.mb-50
+                    .col-xl-3.col-lg-4.col-md-6.col-sm-12.col-xs-12.p-20
+                        h1
+                            .zmdi.zmdi-quote
+                        p 
+                            h2 <?= $testimonial_1_comment; ?>
+                        p
+                            h4.text-right(style='color: #9F0D24;') <?= $testimonial_1_author; ?>
+                                br
+                                | <?= $testimonial_1_location; ?>
+                            
+                    .col-xl-3.col-lg-4.col-md-6.col-sm-12.col-xs-12.p-20
+                        h1
+                            .zmdi.zmdi-quote
+                        p
+                            h2 <?= $testimonial_2_comment; ?>
+                        p
+                            h4.text-right(style='color: #9F0D24;') <?= $testimonial_2_author; ?>
+                                br
+                                | <?= $testimonial_2_location; ?>
+
+
+                    .col-xl-3.col-lg-4.col-md-6.col-sm-12.col-xs-12.p-20
+                        h1
+                            .zmdi.zmdi-quote
+                        p
+                            h2 <?= $testimonial_3_comment; ?>
+                        p
+                            h4.text-right(style='color: #9F0D24;') <?= $testimonial_3_author; ?>
+                                br
+                                | <?= $testimonial_3_location; ?>
+
+                        // End TrustBox widget
+        section#page-content-3.page-wrapper(style='background-color: #FDFBF4')
+            .container
+            // PRODUCT TAB SECTION START
+        // End page content
+        // START FOOTER AREA
+        | <?= $footer ?>  

@@ -1,0 +1,112 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+        script.
+            fbq('track', 'ViewContent');
+    body
+        script.
+            var product_id = '<?= $product_id; ?>';
+            var brand_id = '<?= $brand_id; ?>';
+            
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        section#page-content.page-wrapper.mt-50
+            // SHOP SECTION START
+            .shop-section.mb-80
+                .container
+                    h2 <?= $heading_title; ?>
+                    | <? if(isset($flash) && $flash): ?>
+                    .row
+                        .alert.alert-danger <?= $flash['content']; ?>
+                    | <? endif; ?>
+                    .row
+                        .col-md-7.col-sm-12.col-xs-12
+                            .row
+                                .col-md-12
+                                    p.mb-0
+                                        b <?= $details_order; ?>
+                                            u <?= $heading_title; ?>
+                            .row.mt-10
+                                .col-md-4.col-sm-4
+                                    img(src!="<?= $thumb; ?>", alt='')
+                                .col-md-8.col-sm-8
+                                    h2.label.label-success.p-10
+                                        i.zmdi.zmdi-time-countdown.mr-5
+                                        | <?= $details_delivery_time; ?> <?= $delivery_time; ?>
+                                    p.mt-20.mb-0 <?= $details_competitors_price; ?> <?= $competitors_price; ?>
+                                    p.mb-0 <?= $details_save_price; ?> <?= $save; ?>
+                                    p.mb-0 <?= $details_our_price; ?> 
+                                        b US$<?= $price; ?>
+                            .row.mt-30.hidden-sm.hidden-xs
+                                .col-md-12.col-sm-12.col-xs-12#product-description(style='color: #434343')
+                                    p.hidden-lg.hidden-md <?= $description; ?>
+                                
+                        .col-md-5.col-sm-12.col-xs-12
+                            .message-box.box-shadow.white-bg
+                                form
+                                    .row
+                                        .col-md-12
+                                            h4.blog-section-title.border-left.mb-30 <?= $form_unlock_your_phone; ?>
+                                    .row
+                                        .col-md-10.col-sm-10.col-xs-10
+                                            .form-group
+                                                label(for='carrier-select') <?= $form_carrier; ?>
+                                                select#carrier-select.form-control
+                                                    option(value='-1')
+                                                        | <?= $form_placeholder_carrier; ?>
+                                                    | <?php if(isset($carriers)): ?>
+                                                    | <?php foreach ($carriers as $carrier) { ?>
+                                                    option(data-metadata!="<?= (isset($carrier['metadata']) ? $carrier['metadata'] : '') ?>", value!="<?= $carrier['manufacturer_id'] ?>")
+                                                        | <?php echo html_entity_decode($carrier['name']) ?>
+                                                    | <?php } ?>
+                                                    | <?php endif; ?>
+                                        .col-md-2.col-sm-2.col-xs-2.pt-35
+                                            i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_carrier; ?>')
+                                    .row.mb-10#carrier-select-message(style='display: none;')
+                                        .col-md-10.col-sm-10.col-xs-10.text-center
+                                            a#carrier-select-message-tooltip(data-toggle='tooltip'
+                                            href="#"
+                                            style='text-decoration:underline;'
+                                            title="Don't see your model?")
+                                    .row
+                                        .col-md-10.col-sm-10.col-xs-10
+                                            .form-group
+                                                label(for='imei') <?= $form_imei; ?>
+                                                input#imei.form-control.order-input(type='text', name='imei', placeholder!="<?= $form_placeholder_imei; ?>")
+                                        .col-md-2.col-sm-2.col-xs-2.pt-35
+                                            i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_imei; ?>.')
+                                    .row
+                                        .col-md-10.col-sm-10.col-xs-10
+                                            .form-group
+                                                label(for='email') <?= $form_email; ?>
+                                                input#email.form-control.order-input(type='text', name='email', placeholder!='<?= $form_placeholder_email; ?>')
+                                        .col-md-2.col-sm-2.col-xs-2.pt-35
+                                            i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_email; ?>')
+                                    .row#email-correction-block(style='display:none;')
+                                        .col-md-12
+                                            span#email-correction-text
+                                            | &nbsp;
+                                            a#email-correction-value(style='cursor: pointer;')
+                                            | ?
+                                    .row#unlock-details-row(style='display:none')
+                                        .col-md-4.col-sm-12.col-xs-12.text-center
+                                            img.img-responsive#unlock-phone-image
+                                        .col-md-8.col-sm-12.col-xs-12.mt-30
+                                            h2 <?= $form_details_price; ?> 
+                                                span.label.label-success#unlock-price
+                                            h6.mt-20 <?= $form_details_delivery_time; ?> 
+                                                span#unlock-delivery-time
+                                    .row
+                                        .col-md-12.mt-20.text-center
+                                            .form-group
+                                                button.submit-btn-1#unlock-button <?= $form_button_unlock; ?>
+                                p.form-messege
+                            
+                    .row.hidden-desktop.hidden-md
+                        .col-sm-12.col-xs-12
+                            
+                                    
+            | <?= $footer ?>  
+        

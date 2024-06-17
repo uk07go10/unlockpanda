@@ -1,0 +1,152 @@
+extends header
+
+block header_addition
+    .container.ptb-20
+        | <? if($flash): ?>
+        .row.pb-20
+            .alert.alert-danger <?= $flash['content']; ?>
+        | <? endif; ?>
+        .row
+            .col-md-7.hidden-sm.hidden-xs
+                h1.text-center.mb-10.pt-60(style='color: white; font-size: 48px;') <?= $header_unlock_your; ?> 
+                    span(style='color: #9F0D24;') <?= $header_unlock_phone; ?>
+                // .text-center
+                    iframe.wistia_embed.text-center#video-player-lg(name='wistia_embed', src='//fast.wistia.net/embed/iframe/tgppyeco4f'
+                    allowtransparency='true', frameborder='0', scrolling='no', allowfullscreen='', 
+                    mozallowfullscreen='', webkitallowfullscreen='', oallowfullscreen='' msallowfullscreen=''
+                    width='100%' height='353')
+                    script(src='//fast.wistia.net/assets/external/E-v1.js', async='true')
+                .text-center(style='margin-top: 40px;')
+                    ul.list-inline-pros
+                        li <?= $list_pros_1; ?>
+                        li(style='margin-left: 5px; margin-right: 5px')
+                            span.zmdi.zmdi-circle
+                        li <?= $list_pros_2; ?>
+                        li(style='margin-left: 5px; margin-right: 5px')
+                            span.zmdi.zmdi-circle
+                        li
+                            <?= $list_pros_3; ?>
+                        li(style='margin-left: 5px; margin-right: 5px')
+                            span.zmdi.zmdi-circle
+                        li
+                            <?= $list_pros_4; ?>
+                .text-center.pt-20
+                    .trustpilot-widget(data-locale='en-US', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5b05a5abd7f9370001fc2b7d', data-style-height='24px', data-style-width='100%', data-theme='dark')
+                        a(href='https://www.trustpilot.com/review/www.unlockpanda.com', target='_blank') Trustpilot
+            .col-md-5.col-sm-12
+                .message-box.gradient-gray-yellow-bg
+                    form
+                        .row
+                            .col-md-12
+                                h4.blog-section-title.mb-30.text-center <?= $form_unlock_your_phone; ?>
+                        .row
+                            .col-md-10.col-sm-10.col-xs-10
+                                .form-group
+                                    label(for='carrier-select') <?= $form_carrier; ?>
+                                    select#carrier-select.form-control
+                                        option(value='-1')
+                                            | <?= $form_placeholder_carrier; ?>
+                                        | <?php foreach ($carriers as $carrier) { ?>
+                                        option(data-metadata!="<?= (isset($carrier['metadata']) ? $carrier['metadata'] : '') ?>", value!="<?= $carrier['manufacturer_id'] ?>")
+                                            | <?php echo html_entity_decode($carrier['name']) ?>
+                                        | <?php } ?>
+                            .col-md-2.col-sm-2.col-xs-2.pt-35
+                                i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_carrier; ?>')
+                        .row.mb-10#carrier-select-message(style='display: none;')
+                            .col-md-10.col-sm-10.col-xs-10.text-center
+                                a#carrier-select-message-tooltip(data-toggle='tooltip'
+                                href="#"
+                                style='text-decoration:underline;'
+                                title="Don't see your model?")                               
+                        .row
+                            .col-md-10.col-sm-10.col-xs-10
+                                .form-group
+                                    label(for='brand-select') <?= $form_manufacturer; ?>
+                                    select#brand-select.form-control
+                                        option(value='-1')
+                                            | <?= $form_placeholder_manufacturer; ?>
+                            .col-md-2.col-sm-2.col-xs-2.pt-35
+                                i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_manufacturer; ?>')
+                        .row
+                            .col-md-10.col-sm-10.col-xs-10
+                                .form-group
+                                    label(for='model-select') <?= $form_model; ?>
+                                    select#model-select.form-control
+                                        option(value='-1')
+                                            | <?= $form_placeholder_model; ?>
+                            .col-md-2.col-sm-2.col-xs-2.pt-35
+                                i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_model; ?>')
+                        .row
+                            .col-md-10.col-sm-10.col-xs-10
+                                .form-group
+                                    label(for='imei') <?= $form_imei; ?>
+                                    input#imei.form-control.order-input(type='text', name='imei', placeholder!="<?= $form_placeholder_imei; ?>")
+                            .col-md-2.col-sm-2.col-xs-2.pt-35
+                                i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_imei; ?>.')
+                        .row
+                            .col-md-10.col-sm-10.col-xs-10
+                                .form-group
+                                    label(for='email') <?= $form_email; ?>
+                                    input#email.form-control.order-input(type='text', name='email', placeholder!='<?= $form_placeholder_email; ?>')
+                            .col-md-2.col-sm-2.col-xs-2.pt-35
+                                i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_email; ?>')
+                        .row#email-correction-block(style='display:none;')
+                            .col-md-12
+                                span#email-correction-text 
+                                | &nbsp;
+                                a#email-correction-value(style='cursor: pointer;')
+                                | ?
+                        .row#phone-block
+                            .col-md-10.col-sm-10.col-xs-10
+                                .form-group
+                                    label(for='phone') <?= $form_phone; ?>
+                                    input#phone.form-control.order-input(type='text', name='phone', placeholder!='<?= $form_placeholder_phone; ?>')
+                            .col-md-2.col-sm-2.col-xs-2.pt-35
+                                i.zmdi.zmdi-help-outline(style='font-size: 28px;', data-toggle='tooltip', data-container='body', title!='<?= $form_helper_phone; ?>')
+
+                        .row(style='border-bottom: 1px solid #999; padding-bottom:10px;')
+                            .col-md-12.mt-20.text-center
+                                .fb-like(data-href='https://www.facebook.com/UnlockPanda/', data-width='200px', data-layout='standard', data-action='like', data-size='small', data-show-faces='true', data-share='false')
+                        .row#unlock-details-row(style='display:none; padding-top:10px;')
+                            .col-md-4.col-sm-12.col-xs-12.text-center
+                                img.img-responsive#unlock-phone-image
+                            .col-md-8.col-sm-12.col-xs-12.mt-30
+                                h2 <?= $form_details_price; ?> 
+                                    span.label.label-success#unlock-price
+                                h6.mt-20 <?= $form_details_delivery_time; ?> 
+                                    span#unlock-delivery-time
+                            // .row
+                                .col-md-12.mt-10
+                                    .alert.alert-info <?= $form_covid_19; ?>
+                        .row
+                            .col-md-12.mt-20.text-center
+                                .form-group
+                                    button.submit-btn-1#unlock-button <?= $form_button_unlock; ?>
+                    p.form-messge
+            .col-sm-12.hidden-lg.hidden-sm
+                h1.text-center.mb-10.pt-60(style='color: white; font-size: 48px;') <?= $header_unlock_your; ?> 
+                    span(style='color: #9F0D24;') <?= $header_unlock_phone; ?>
+                .text-center
+                    iframe.wistia_embed.text-center#video-player-sm(name='wistia_embed', src='//fast.wistia.net/embed/iframe/tgppyeco4f'
+                    allowtransparency='true', frameborder='0', scrolling='no', allowfullscreen='',
+                    mozallowfullscreen='', webkitallowfullscreen='', oallowfullscreen='' msallowfullscreen=''
+                    width='100%' height='353')
+                    script(src='//fast.wistia.net/assets/external/E-v1.js', async='true')
+                .text-center
+                    ul.list-inline-pros
+                        li <?= $list_pros_1; ?>
+                        li(style='margin-left: 5px; margin-right: 5px')
+                            span.zmdi.zmdi-circle
+                        li <?= $list_pros_2; ?>
+                        li(style='margin-left: 5px; margin-right: 5px')
+                            span.zmdi.zmdi-circle
+                        li
+                            <?= $list_pros_3; ?>
+                        li(style='margin-left: 5px; margin-right: 5px')
+                            span.zmdi.zmdi-circle
+                        li
+                            <?= $list_pros_4; ?>
+                .text-center.pt-20
+                    .trustpilot-widget(data-locale='en-US', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5b05a5abd7f9370001fc2b7d', data-style-height='24px', data-style-width='100%', data-theme='dark')
+                        a(href='https://www.trustpilot.com/review/www.unlockpanda.com', target='_blank') Trustpilot
+            

@@ -1,0 +1,39 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+    body
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        section#page-content.page-wrapper.mt-50
+            // SHOP SECTION START
+            .shop-section.mb-80
+                .container
+                    | <? if($flash): ?>
+                    .row
+                        .alert.alert-danger <?= $flash['content']; ?>
+                    | <? endif; ?>
+                    .row
+                        .col-md-12 
+                            h2 <?= $heading_title; ?>
+                        .col-md-12
+                            p <?= $text_insert; ?>
+                            p <?= $text_note; ?>
+                            
+                    .row
+                        .col-md-2
+                            .form-group
+                                input.form-control#order-email(type='email', placeholder='Email')
+                    .row
+                        .col-md-2
+                            .form-group
+                                input.form-control#order-id(placeholder='Order ID')
+                    .row
+                        .col-md-2
+                            button.submit-btn-1.btn-hover-1#check-status <?= $button_continue; ?>
+                    .row.mt-10
+                        .col-md-12#result
+                                    
+            | <?= $footer ?>  
+        

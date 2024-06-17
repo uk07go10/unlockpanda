@@ -1,0 +1,87 @@
+- var base = '/catalog/view/theme/ur/'
+doctype html
+html.no-js(lang='en')
+    head
+        | <?= $scripts ?>
+        script.
+            var text = text || {};
+            text.faq = {
+                en: {
+
+                },
+                es: {
+                }
+            };
+
+            var faqText = text.faq[language];
+
+            $(function () {
+                $('#faq').collapse({
+                    query: '.panel .panel-heading',
+                    persist: true,
+                    accordion: true
+                });
+
+                function isChatAvailable() {
+                    var now = moment().tz('EST');
+
+
+                    var weekday = now.isoWeekday();
+                    if(weekday > 5) {
+                        return false;
+                    }
+
+                    moment.tz.setDefault('EST');
+                    var startFirst = moment('10:00:00', 'hh:mm:ss');
+                    var endFirst = moment('14:00:00', 'hh:mm:ss');
+
+                    var startSecond = moment('17:00:00', 'hh:mm:ss');
+                    var endSecond = moment('23:59:59', 'hh:mm:ss');
+
+                    return !!(now.isBetween(startFirst, endFirst) || now.isBetween(startSecond, endSecond));
+
+
+                };
+
+                if(isChatAvailable()) {
+                    $('.chat-available').show();
+                } else {
+                    $('.chat-unavailable').show();
+                }
+            });
+    body
+        | <?= isset($header) ? $header : "" ?>
+        | <?= isset($header_form) ? $header_form : "" ?>
+        section#page-content.page-wrapper.mt-50
+            // SHOP SECTION START
+            .shop-section.mb-80
+                .container
+                    | <? if(isset($flash)): ?>
+                    .row
+                        .alert.alert-danger <?= $flash['content']; ?>
+                    | <? endif; ?>
+                    .row.pb-20
+                        .col-md-12.col-sm-12.col-xs-12
+                            h1 <?= $text_header; ?>
+                    .row
+                        .col-md-12.col-sm-12.col-xs-12.information-page
+                            .panel-group#faq
+                                | <? foreach($faqs as $faq): ?>
+                                .panel.panel-default
+                                    .panel-heading
+                                        h4.panel-title
+                                            i.zmdi.zmdi-help-outline
+                                            |
+                                            | <?= $faq['title']; ?>
+                                    .panel-body
+                                        p <?= $faq['description']; ?>
+                                        p <?= $text_contact_pre ?> 
+                                            a.button.extra-small(onclick='zE.activate();', style='height: 22px; position: relative; top: 6px;')
+                                                i.zmdi.zmdi-help-outline(style='padding: 5px; width: 28px; font-size: 13px;')
+                                                |
+                                                span.chat-available(style='display:none; padding: 1px 10px; font-size: 12px') <?= $text_contact_button_chat_available ?>
+                                                span.chat-unavailable(style='display:none; padding: 1px 10px; font-size: 12px') <?= $text_contact_button_chat_unavailable ?>
+                                | <? endforeach; ?>
+
+            | <?= $footer ?>  
+        

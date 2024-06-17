@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+.jquery-selectbox {
+	position: relative;
+	height: 35px;
+	width: 270px !important;
+	z-index: 0;
+	float: left;
+	display: inline;
+/*	margin: 4px 4px 4px 0;*/
+	font-size: 13px;
+        text-align: center;
+/*	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;*/
+	color: #333;
+	padding: 0;
+/*        margin-left: 30px;*/
+/*	background-image: url("../img/bg-TextField.gif");*/
+}
+.jquery-selectbox.selecthover {
+	
+	z-index: 700;
+}	
+.jquery-selectbox .jquery-selectbox-currentItem {
+/*	padding: 3px 0px 0px 3px;
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;*/
+        
+        background-color: #E4E4E4;
+        border-right: 2px groove #BBBBBB;
+        border-top: 2px groove #BBBBBB;
+        border-left: 1px solid #AAA;
+        border-bottom: 1px solid #AAA;
+        height: 30px;
+        width: 218px;
+        line-height: 30px;
+        display: block;
+        padding: 3px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        float: left;
+        
+}
+
+.jquery-selectbox .jquery-selectbox-list {
+	display: none;
+	position: absolute;
+	top: 40px;
+	padding: 2px;
+	left: 0px;
+	background: #86729F;
+	width: 100px;
+	height: 120px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: 1000;
+	border: 1px solid gray;
+}
+.jquery-selectbox .jquery-selectbox-moreButton {
+	/*
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	*/
+	float: right;
+	background: url("../image/down_arrow.png");
+	width: 32px;
+	height: 48px;
+	cursor: pointer;
+}
+.jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover {
+/*	background: url("../img/lay-selectMoreButtonHover.gif");*/
+}
+
+.jquery-selectbox .jquery-selectbox-item.listelementhover {
+	background: #4a2d70;
+	color: #eee;
+}
+.jquery-selectbox .jquery-selectbox-item {
+	display: block;
+	cursor: default;
+}
+
+/** ERROR classes **/
+form .error .jquery-selectbox {
+	color: #d00;
+	border-color: #d00;
+/*	background-image: url("../img/bg-TextFieldError.gif");*/
+}
