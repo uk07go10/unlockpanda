@@ -10,7 +10,12 @@
 <?= $navigation ?>
 
 <!-- Page Body -->
-<?php if($this->session->data['language'] == 'en'){ ?>
+<div class="navigation-offset-container container-xxl">
+    <section class="information-section">
+        <?= $description ?>
+    </section>
+
+    <?php if($this->session->data['language'] == 'en'){ ?>
   <section class="bottom-desc-section">
     <div class="bottom-desc-row">
         <h1 class="bottom-desc-title">
@@ -40,6 +45,7 @@
     </div>
 </section>
 <?php }  ?>
+</div>
 <!-- Page Body -->
 
 <?= $footer ?>
