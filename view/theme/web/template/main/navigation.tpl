@@ -15,12 +15,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <?php if (count($languages) > 1) { ?>
        <li class="navigation-menu-item ">
          <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+           <div id="language" style="padding-bottom: 29px;><?php echo $text_language; ?><br />
             <?php foreach ($languages as $language) { ?>
-            &nbsp;<img src="image/flags/<?php echo $language['image']; ?>" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>" onclick="setLanguageAndSubmit('<?php echo $language['code']; ?>');" />
+            &nbsp;<img src="image/flags/<?php echo $language['image']; ?>" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>" onclick="setLanguageAndSubmit('<?php echo $language['code']; ?>');" style="cursor:pointer;"/>
             <?php } ?>
-            languages
             <input type="hidden" name="language_code" id="language_code" value="" />
             <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+           < /div>
          </form>
        </li>
 <?php } ?>
