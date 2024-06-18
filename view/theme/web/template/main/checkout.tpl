@@ -226,7 +226,7 @@
                         <li>
                             <strong>Rápido y fácil de seguir:</strong>
                             Ofrecemos el servicio más rápido que existe,
-                            y podrás ver el estado en vivo de tu desbloqueo en cualquier momento.
+                            y podrás ver el estado en vivo de tu liberación en cualquier momento.
                         </li>
                         <li>
                             <strong>24/7 Support Team:</strong>Nuestro amable equipo está listo para ayudarle con
@@ -240,7 +240,7 @@
                             Desbloquea tu teléfono fácilmente desde tu casa, sin ningún problema.
                         </li>
                         <li><strong>Global Recognition:</strong>
-                            Millones de personas en todo el mundo confían en nosotros para servicios de desbloqueo confiables.
+                            Millones de personas en todo el mundo confían en nosotros para servicios de liberación confiables.
                         </li>
                     </ul>
                 </div>
@@ -276,12 +276,12 @@
 
                 <div class="info-list panel">
                     Desbloquear tu teléfono con nosotros te trae un mundo de ventajas que van más allá del ahorro y la seguridad.
-                    He aquí por qué el desbloqueo es una gran opción:
+                    He aquí por qué el liberación es una gran opción:
                     <ul class="mt-3">
                         <li><strong>Increased Resale Value:</strong> El valor de mercado de tu teléfono aumenta cuando está desbloqueado.</li>
                         <li><strong>Reduced Roaming Costs:</strong>Ahorre en esas elevadas facturas utilizando operadores locales cuando viaje.</li>
                         <li><strong>Freedom of Choice:</strong>Disfrute de la libertad de elegir cualquier operador, cualquier tarjeta SIM o cualquier eSIM en todo el mundo, liberándose de las restricciones de su operador actual.</li>
-                        <li><strong>Safe and Permanent:</strong> El proceso de desbloqueo es seguro y no deja daños en tu teléfono; es un proceso único que dura para siempre.</li>
+                        <li><strong>Safe and Permanent:</strong> El proceso de liberación es seguro y no deja daños en tu teléfono; es un proceso único que dura para siempre.</li>
                         <li><strong>Enhanced Network Compatibility:</strong> Su teléfono desbloqueado puede funcionar prácticamente con cualquier red, lo que le brinda la flexibilidad de cambiar según sus preferencias.</li>
                     </ul>
                 </div>
