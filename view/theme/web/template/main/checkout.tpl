@@ -220,27 +220,27 @@
                     <img src="/catalog/view/theme/web/img/payment/accordion arrow.svg" alt="Accordion Icon"/>
                 </div>
                 <div class="info-list panel">
-                    Choose us for a service that is quick, dependable, and always here to help you. <br/>
-                    Here's why you'll love unlocking your phone with us:
+                    Elíjanos para un servicio rápido, confiable y siempre aquí para ayudarlo. <br/>
+                   He aquí por qué te encantará desbloquear tu teléfono con nosotros:
                     <ul class="mt-3">
                         <li>
-                            <strong>Fast and Easy to Track:</strong>
-                            We offer the quickest service out there,
-                            and you can watch the live status of your unlock at any time.
+                            <strong>Rápido y fácil de seguir:</strong>
+                            Ofrecemos el servicio más rápido que existe,
+                            y podrás ver el estado en vivo de tu desbloqueo en cualquier momento.
                         </li>
                         <li>
-                            <strong>24/7 Support Team:</strong> Our friendly team is ready to help you with
-                            any questions, day or night.
+                            <strong>24/7 Support Team:</strong>Nuestro amable equipo está listo para ayudarle con
+                                 pregunta, de día o de noche.
                         </li>
                         <li><strong>Safe and Legal:</strong>
-                            We unlock your phone in a way that is 100% safe and allowed by law,
-                            without hurting your warranty.
+                            Desbloqueamos tu teléfono de forma 100% segura y permitida por la ley,
+                            sin perjudicar tu garantía.
                         </li>
                         <li><strong>Simple and Convenient:</strong>
-                            Unlock your phone easily from your own home, without any trouble.
+                            Desbloquea tu teléfono fácilmente desde tu casa, sin ningún problema.
                         </li>
                         <li><strong>Global Recognition:</strong>
-                            Trusted by millions globally for reliable unlocking services.
+                            Millones de personas en todo el mundo confían en nosotros para servicios de desbloqueo confiables.
                         </li>
                     </ul>
                 </div>
@@ -253,17 +253,17 @@
                 </div>
 
                 <div class="info-list panel">
-                    We stand by our promise to unlock your phone successfully, even when your carrier won't or if it's under contract.
-                    However, be aware of the following: <br /><br />
-                    <strong>Guaranteed Unlock:</strong> If we can't unlock your phone, you get your money back. <br/><br/>
-                    <strong>Refund Policy:</strong> We cannot issue refunds for incorrect information provided by the customer, such as:
+                   Mantenemos nuestra promesa de desbloquear su teléfono con éxito, incluso cuando su operador no lo haga o si está bajo contrato.
+                    Sin embargo, tenga en cuenta lo siguiente: <br /><br />
+                    <strong>Guaranteed Unlock:</strong> Si no podemos desbloquear tu teléfono, te devolvemos tu dinero.<br/><br/>
+                    <strong>Refund Policy:</strong> No podemos emitir reembolsos por información incorrecta proporcionada por el cliente, como:
                     <ul>
-                        <li>Wrong or already unlocked IMEI</li>
-                        <li>Incorrect carrier or phone model</li>
-                        <li>Blacklisted phones (stolen/lost)</li>
+                        <li>IMEI incorrecto o ya desbloqueado</li>
+                        <li>Portador incorrecto o modelo de teléfono</li>
+                        <li>Teléfonos incluidos en la lista negra (robados/perdidos)</li>
                     </ul>
 
-                    <a href="/refund-policy" target="_blank">Detailed refund policy</a>
+                    <a href="/refund-policy" target="_blank">Política de reembolso detallada</a>
 
                 </div>
             </div>
@@ -275,14 +275,14 @@
                 </div>
 
                 <div class="info-list panel">
-                    Unlocking your phone with us brings you a world of advantages that go beyond just savings and safety.
-                    Here is why unlocking is a great choice:
+                    Desbloquear tu teléfono con nosotros te trae un mundo de ventajas que van más allá del ahorro y la seguridad.
+                    He aquí por qué el desbloqueo es una gran opción:
                     <ul class="mt-3">
-                        <li><strong>Increased Resale Value:</strong> Your phone’s market value gets a boost when it is unlocked.</li>
-                        <li><strong>Reduced Roaming Costs:</strong> Save on those hefty bills by using local carriers when you are traveling.</li>
-                        <li><strong>Freedom of Choice:</strong> Enjoy the liberty to choose any carrier, any SIM card, or any eSIM worldwide, breaking free from the restrictions of your current carrier.</li>
-                        <li><strong>Safe and Permanent:</strong> The unlocking process is safe and leaves no damage on your phone; it’s a one-time process that lasts forever.</li>
-                        <li><strong>Enhanced Network Compatibility:</strong> Your unlocked phone can work with virtually any network, giving you the flexibility to switch as per your preference.</li>
+                        <li><strong>Increased Resale Value:</strong> El valor de mercado de tu teléfono aumenta cuando está desbloqueado.</li>
+                        <li><strong>Reduced Roaming Costs:</strong>Ahorre en esas elevadas facturas utilizando operadores locales cuando viaje.</li>
+                        <li><strong>Freedom of Choice:</strong>Disfrute de la libertad de elegir cualquier operador, cualquier tarjeta SIM o cualquier eSIM en todo el mundo, liberándose de las restricciones de su operador actual.</li>
+                        <li><strong>Safe and Permanent:</strong> El proceso de desbloqueo es seguro y no deja daños en tu teléfono; es un proceso único que dura para siempre.</li>
+                        <li><strong>Enhanced Network Compatibility:</strong> Su teléfono desbloqueado puede funcionar prácticamente con cualquier red, lo que le brinda la flexibilidad de cambiar según sus preferencias.</li>
                     </ul>
                 </div>
             </div>
