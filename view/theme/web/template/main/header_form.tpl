@@ -1,5 +1,5 @@
 
-<?php if($this->session->data['language'] == 'es'){ ?>
+<?php if($this->session->data['language'] == 'en'){ ?>
    <section class="unlock-hero custom-flex-row justify-center w-full">
     <div class="unlock-hero-container w-full custom-flex-row items-center">
         <div class="unlock-hero-left">
