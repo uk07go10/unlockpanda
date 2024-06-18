@@ -455,7 +455,7 @@
   <section class="faq-section custom-flex-row justify-center w-full">
     <div class="faq-container custom-flex-row">
         <div>
-            <h1 class="faq-title">Preguntas  Asked<br />Frecuentes</h1>
+            <h1 class="faq-title">Preguntas <br />Frecuentes</h1>
             <p class="faq-desc">¿No encuentras lo que estás buscando?</p>
             <p class="faq-chat custom-flex-row items-center">
                Nos encantaría&nbsp;<span>chatear<img src="/catalog/view/theme/web/img/unlock/faq-arrow.svg" alt="FAQ Arrow"
