@@ -38,7 +38,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/catalog/view/theme/web/img/top menu/Unlock-By-IMEI.png" alt="Unlock By IMEI" />
                         <div>
                             <p class="menu-dropdown-item-title">Unlock By IMEI</p>
-                            <p class="menu-dropdown-item-desc">Unlock Your Phone By Using <br />16 digit IMEI
+                            <p class="menu-dropdown-item-desc">Unlock Your Phone By Using <br />15 digit IMEI
                                 Number.
                             </p>
                         </div>
@@ -119,7 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/catalog/view/theme/web/img/top menu/Unlock-By-IMEI.png" alt="Unlock By IMEI" />
                         <div>
                             <p class="menu-dropdown-item-title">Unlock By IMEI</p>
-                            <p class="menu-dropdown-item-desc">Unlock Your Phone By Using <br />16 digit IMEI
+                            <p class="menu-dropdown-item-desc">Unlock Your Phone By Using <br />15 digit IMEI
                                 Number.
                             </p>
                         </div>
@@ -220,8 +220,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="/index.php?route=main/home" class="menu-item-with-icon">
                         <img src="/catalog/view/theme/web/img/top menu/Unlock-By-IMEI.png" alt="Unlock By IMEI" />
                         <div>
-                            <p class="menu-dropdown-item-title">Desbloqueo por IMEI</p>
-                            <p class="menu-dropdown-item-desc">Desbloquee su teléfono usando el número  <br />IMEI de 16 dígitos.
+                            <p class="menu-dropdown-item-title">Liberación por IMEI</p>
+                            <p class="menu-dropdown-item-desc">Libera tu teléfono usando el número <br> IMEI de 15 dígitos.
                             </p>
                         </div>
                     </a>
@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="menu-item-with-icon menu-item-coming-soon">
                         <img src="/catalog/view/theme/web/img/top menu/Unlock-By-Cable.png" alt="Unlock By Cable" />
                         <div>
-                            <p class="menu-dropdown-item-title">Desbloqueo por cable</p>
+                            <p class="menu-dropdown-item-title">Liberación por cable</p>
                             <p class="menu-dropdown-item-desc">¡Muy pronto!</p>
                         </div>
                     </div>
@@ -300,8 +300,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="/index.php?route=main/home" class="menu-item-with-icon">
                         <img src="/catalog/view/theme/web/img/top menu/Unlock-By-IMEI.png" alt="Unlock By IMEI" />
                         <div>
-                            <p class="menu-dropdown-item-title">Desbloqueo por IMEI</p>
-                            <p class="menu-dropdown-item-desc">Desbloquee su teléfono usando el número  <br />IMEI de 16 dígitos.
+                            <p class="menu-dropdown-item-title">Liberación por IMEI</p>
+                            <p class="menu-dropdown-item-desc">Libera tu teléfono usando el número <br> IMEI de 15 dígitos.
                             </p>
                         </div>
                     </a>
@@ -309,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="menu-item-with-icon menu-item-coming-soon">
                         <img src="/catalog/view/theme/web/img/top menu/Unlock-By-Cable.png" alt="Unlock By Cable" />
                         <div>
-                            <p class="menu-dropdown-item-title">Desbloqueo por cable</p>
+                            <p class="menu-dropdown-item-title">Liberación por cable</p>
                             <p class="menu-dropdown-item-desc">¡Muy pronto!</p>
                         </div>
                     </div>

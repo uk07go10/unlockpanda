@@ -98,7 +98,7 @@
                 <img src="/catalog/view/theme/web/img/shared/carrier.svg" class="input-icons" alt="Carrier" />
                 <div class="custom-dropdown w-full flex-1 relative custom-flex-row items-center">
                     <select id="carrier-select" class="rich-select">
-                        <option value="-1">Seleccione el transportista. </option>
+                        <option value="-1">País y Operador Original</option>
                     <? foreach($carriers as $carrier): ?>
                         <option value="<?= $carrier['manufacturer_id'] ?>"><?php echo html_entity_decode($carrier['name']) ?></option>
                     <? endforeach; ?>
@@ -137,7 +137,7 @@
             </div>
 
             <div class="input-with-icon">
-                <input id="phone" type="text" class="custom-input" placeholder="Número de WhatsApp" />
+                <input id="phone" type="text" class="custom-input" placeholder="Número de WhatsApp(Opcional)" />
             </div>
 
             <div id="unlock-details-row" class="row justify-content-center" style="display: none;">
