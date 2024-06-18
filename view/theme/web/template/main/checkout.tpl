@@ -163,7 +163,7 @@
 <?php }else{ ?>
 
      <div class="page-container">
-    <h1 class="page-title">Review Your Order</h1>
+    <h1 class="page-title">Verifica tu Orden</h1>
     <div class="review-order-row">
         <form class="order-form">
             <? foreach($products as $product): ?>
@@ -171,52 +171,52 @@
                 <img src="<?= $product['thumb']; ?>" alt=""/>
                 <div>
                     <h4 class="order-form-header-title">
-                        Permanent unlock of <?= $product['name'] ?>
+                        Ordena la Liberación de Fábrica de su <?= $product['name'] ?>
                     </h4>
                     <p class="imei-number">
                         <span>IMEI:</span> <?= $product['imei']; ?>
                     </p>
                     <p class="original-carrier">
-                        <span>Original Carrier: </span><?= $product['carrier']; ?>
+                        <span>Operador Original: </span><?= $product['carrier']; ?>
                     </p>
                 </div>
             </div>
             <hr/>
-            <p class="discount-title">Coupon Discount</p>
+            <p class="discount-title">Cupón de Descuento</p>
             <div id="coupon-error" class="alert alert-danger" style="display: none">
 
             </div>
             <div class="discount-input-row">
-                <input id="coupon" type="text" class="discount-input" placeholder="Enter your code here.. "/>
-                <button id="button-coupon" class="discount-apply-btn">Apply</button>
+                <input id="coupon" type="text" class="discount-input" placeholder="Ingresa tu código aquí..."/>
+                <button id="button-coupon" class="discount-apply-btn">Aplicar</button>
             </div>
             <hr/>
             <? foreach($totals as $total): ?>
             <? if ($total['title'] === 'Total'): ?>
             <div class="price-row">
-                <p>Our price</p>
+                <p>Precio: </p>
                 <p><?= $total['text']; ?></p>
             </div>
             <? endif ?>
             <? endforeach; ?>
-            <p class="delivery-time">Delivery Time: <?= $product['delivery_time']; ?></p>
+            <p class="delivery-time">Tiempo de Entrega: <?= $product['delivery_time']; ?></p>
             <hr/>
             <? endforeach; ?>
-            <p class="payment-method-select-title">Payment Method</p>
+            <p class="payment-method-select-title">Selecciona tu Método de Pago</p>
             <div class="payment-method-select-row">
                 <div class="payment-method-item">
                     <img src="/catalog/view/theme/web/img/payment/card.svg" alt="Card Payment"/>
-                    <p class="payment-method-name">Card</p>
+                    <p class="payment-method-name">Tarjeta</p>
                 </div>
             </div>
             <?= $stripe_new ?>
-            <p class="terms-text">By placing your order you agree to our <a href="#">terms and condition.</a></p>
+            <p class="terms-text">Al realizar el pago aceptas nuestros<a href="#"> Términos y Condiciones.</a></p>
         </form>
 
         <div class="payment-form-right-info">
             <div class="info-box">
                 <div class="custom-flex-row items-center justify-between cursor-pointer w-full accordion">
-                    <p class="info-title">Why Unlock With Us?</p>
+                    <p class="info-title"¿Por qué liberar con nosotros?</p>
                     <img src="/catalog/view/theme/web/img/payment/accordion arrow.svg" alt="Accordion Icon"/>
                 </div>
                 <div class="info-list panel">
@@ -248,7 +248,7 @@
 
             <div class="info-box">
                 <div class="custom-flex-row items-center justify-between cursor-pointer w-full accordion">
-                    <p class="info-title"><span>100% Money-Back Guarantee</span></p>
+                    <p class="info-title"><span>Política de Garantia de devolución del 100% del dinero</span></p>
                     <img src="/catalog/view/theme/web/img/payment/accordion arrow.svg" alt="Accordion Icon"/>
                 </div>
 
@@ -270,7 +270,7 @@
 
             <div class="info-box">
                 <div class="custom-flex-row items-center justify-between cursor-pointer w-full accordion">
-                    <p class="info-title">Benefits of Unlocking Your Phone</p>
+                    <p class="info-title">Beneficios de desbloquear tu teléfono</p>
                     <img src="/catalog/view/theme/web/img/payment/accordion arrow.svg" alt="Accordion Icon"/>
                 </div>
 
@@ -288,21 +288,21 @@
             </div>
 
             <div class="info-box">
-                <p class="info-title">For additional information, please check these links:</p>
+                <p class="info-title">Para más información, consulta estos enlaces:</p>
                 <ul class="info-list text-underline">
                     <li>
                         <a href="/cdma-carriers" target="_blank">
-                            CDMA Carriers
+                            Lista de Operadores Telefónicos CDMA 
                         </a>
                     </li>
                     <li>
                         <a href="/terms-conditions" target="_blank">
-                            Terms and Conditions
+                            Términos y condiciones
                         </a>
                     </li>
                     <li>
                         <a href="/refund-policy">
-                            Refund policy
+                            Politica de reembolso
                         </a>
                     </li>
                 </ul>

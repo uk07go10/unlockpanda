@@ -192,7 +192,7 @@
         <img src="/catalog/view/theme/web/img/unlock/why-choose-cover.svg" class="why-choose-cover" alt="Cover Image" />
         <div>
             <h1 class="why-choose-title">¿Por qué elegir UnlockPanda para liberar tu teléfono?</h1>
-            <p class="why-choose-desc">UnlockPanda proporciona el servicio sin complicaciones para liberar tu teléfono. Con servicios como Liberación de Red, Liberación de Operadores, Comprobaciones de Estado de iCloud y más, brindamos soluciones confiables respaldadas por un servicio de atención al cliente excepcional. Disfruta de la libertad de usar tu teléfono en cualquier red con nuestra garantía de devolución del 100% del dinero. Confíea en UnlockPanda para una liberación segura y sin problemas.</p>
+            <p class="why-choose-desc">UnlockPanda proporciona el servicio sin complicaciones para liberar tu teléfono. Con servicios como Liberación de Red, Liberación de Operadores, Comprobaciones de Estado de iCloud y más, brindamos soluciones confiables respaldadas por un servicio de atención al cliente excepcional. Disfruta de la libertad de usar tu teléfono en cualquier red con nuestra garantía de devolución del 100% del dinero. Confía en UnlockPanda para una liberación segura y sin problemas.</p>
             <!--
             <button class="learn-more-button custom-flex-row items-center">Más Información
                 <img src="/catalog/view/theme/web/img/unlock/right-arrow.svg" alt="Right Arrow" />
@@ -315,7 +315,7 @@
 <?php }else{ ?>
 
   <section class="testimonial-section custom-flex-col items-center">
-    <h1 class="testimonial-title">¿No crees que <span>así de</span> easy, <span> simple?</span></h1>
+    <h1 class="testimonial-title">¿No crees que <span>así de</span><span> simple?</span></h1>
     <p class="testimonial-desc">Realmente lo es. Descubre lo que dicen nuestros clientes 👇🏼</p>
 
     <div class="trustpilot-testimonial-container custom-flex-row">
