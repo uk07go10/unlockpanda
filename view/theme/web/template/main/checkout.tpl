@@ -216,7 +216,7 @@
         <div class="payment-form-right-info">
             <div class="info-box">
                 <div class="custom-flex-row items-center justify-between cursor-pointer w-full accordion">
-                    <p class="info-title"¿Por qué liberar con nosotros?</p>
+                    <p class="info-title">¿Por qué liberar con nosotros?</p>
                     <img src="/catalog/view/theme/web/img/payment/accordion arrow.svg" alt="Accordion Icon"/>
                 </div>
                 <div class="info-list panel">
