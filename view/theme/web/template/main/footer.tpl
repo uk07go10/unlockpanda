@@ -5,8 +5,7 @@
         <div>
             <img src="/catalog/view/theme/web/img/logo.png" alt="Logo Image" />
             <p class="footer-desc">Unlock your phone effortlessly and permanently with The Ultimate Solution to
-                Network Unlock. Our process is easy, safe, and comes with a money-back guarantee. Note: CDMA
-                carriers not compatible.</p>
+                Network Unlock. Our process is easy, safe, and comes with a money-back guarantee.</p>
             <div class="social-row">
                 <a href="https://www.facebook.com/UnlockPanda/"  target="_blank" class="social-link">
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +90,7 @@
     <div class="footer-row">
         <div>
             <img src="/catalog/view/theme/web/img/logo.png" alt="Logo Image" />
-            <p class="footer-desc">Libera tu teléfono sin complicaciones y de forma permanente con la solución definitiva para el Desbloqueo de Red. Nuestro proceso es fácil, seguro y viene con una garantía de devolución de dinero. Nota: Los operadores CDMA no son compatibles.</p>
+            <p class="footer-desc">Libera tu teléfono sin complicaciones y de forma permanente con la solución definitiva para el Liberación de Red. Nuestro proceso es fácil, seguro y viene con una garantía de devolución de dinero.</p>
             <div class="social-row">
                 <a href="https://www.facebook.com/UnlockPanda/"  target="_blank" class="social-link">
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,9 +131,9 @@
         </div>
 
         <div>
-            <p class="footer-menu-title">enlaces rápidos</p>
+            <p class="footer-menu-title">Enlaces</p>
             <ul class="footer-menu">
-                <li><a href="/index.php?route=main/home">Hogar</a></li>
+                <li><a href="/index.php?route=main/home">Inicio</a></li>
                 <li><a href="/index.php?route=main/home">Contáctenos</a></li>
                 <li><a href="/index.php?route=main/home">FAQs</a></li>
                 <li><a href="/about-us">Sobre nosotros</a></li>
@@ -156,11 +155,11 @@
         <div>
             <p class="footer-menu-title">Soporte</p>
             <ul class="footer-menu">
-                <li><a onclick="zE.activate()">chat en vivo</a></li>
+                <li><a onclick="zE.activate()">Chat en vivo</a></li>
                 <li><a href="/index.php?route=main/contact">Soporte de correo electrónico</a></li>
                 <li><a href="/index.php?route=main/faq">FAQ</a></li>
                 <li><a href="/index.php?route=main/status">Comprobar el estado del pedido</a></li>
-                <li><a href="/troubleshooting">solución de problemas</a></li>
+                <li><a href="/troubleshooting">Solución de problemas</a></li>
                 <li><a href="/cdma-carriers">Portadores CDMA</a></li>
             </ul>
         </div>

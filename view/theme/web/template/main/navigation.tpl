@@ -235,14 +235,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <div class="menu-item-coming-soon">
-                        <p class="menu-dropdown-title">Comprobación del estado del bloqueo de la tarjeta SIM</p>
+                        <p class="menu-dropdown-title">Verificación de Estado de Bloqueo SIM</p>
                         <p class="menu-dropdown-item-desc">¡Muy pronto!</p>
                     </div>
                 </div>
             </li>
 
             <li class="navigation-menu-item">
-                <a href="/howit2">Así Funcion</a>
+                <a href="/howit2">Así Funciona</a>
             </li>
 
             <li class="navigation-menu-item dropdown-tab custom-flex-row items-center">
@@ -324,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
 
         <li class="navigation-menu-item">
-            <a href="/howit2">Así Funcion</a>
+            <a href="/howit2">Así Funciona</a>
         </li>
 
         <li class="navigation-menu-item dropdown-tab custom-flex-col">

@@ -75,7 +75,7 @@
                 <ul>
                     <li>Utilice el mismo correo electrónico que utilizó para realizar el pedido.</li>
                     <li>El ID del pedido se puede encontrar en el correo electrónico de recibo.</li>
-                    <li>Los tiempos de entrega pueden variar según la marca de tu teléfono. Por lo general, los códigos de desbloqueo se entregan
+                    <li>Los tiempos de entrega pueden variar según la marca de tu teléfono. Por lo general, los códigos de liberación se entregan
 en 24
 horas, sin embargo, en algunos casos puede demorar hasta 15 días hábiles según la marca, el
 modelo y la
