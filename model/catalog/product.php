@@ -115,7 +115,6 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getBrandsByCarrier($carrier_id) {
-        die('jj');
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
         $brands = $this->cache->get($cache_key);
 
