@@ -120,7 +120,7 @@ class ModelCatalogProduct extends Model {
 
         $results = array();
 
-        if(!$brands) {
+        // if(!$brands) {
           
             $sql = "SELECT c.category_id, cd.name FROM category c " .
                 "JOIN category_description cd ON (c.category_id = cd.category_id) " .
@@ -142,10 +142,10 @@ class ModelCatalogProduct extends Model {
 
             $this->cache->set($cache_key, $results);
 
-        } else {
-            print_r("here comes");
-            $results = $brands;
-        }
+        // } else {
+        //     print_r("here comes");
+        //     $results = $brands;
+        // }
 
         return $results;
 
