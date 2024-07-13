@@ -116,9 +116,8 @@ class ModelCatalogProduct extends Model {
 
     public function getBrandsByCarrier($carrier_id) {
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
-        echo "cache_key   <pre>"; print_r($cache_key); echo "</pre>";
         $brands = $this->cache->get($cache_key);
-echo "brands   <pre>"; print_r($cache_key); echo "</pre>";
+
         $results = array();
 
         if(!$brands) {
@@ -133,6 +132,7 @@ echo "brands   <pre>"; print_r($cache_key); echo "</pre>";
                 "ORDER BY cd.name ASC";
 
             $data = $this->db->query($sql);
+            echo "<pre>"; print_r($data);
             foreach($data->rows as $row) {
                 $results[] = array(
                     "category_id" => $row["category_id"],
