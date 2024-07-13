@@ -119,7 +119,6 @@ class ModelCatalogProduct extends Model {
 
         // Clear the cache before fetching new data
         if ($this->cache->get($cache_key)) {
-            echo "here cache 6666 s ".$cache_key  "</br>";
             $this->cache->delete($cache_key);
         }
 
