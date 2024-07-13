@@ -116,9 +116,12 @@ class ModelCatalogProduct extends Model {
 
     public function getBrandsByCarrier($carrier_id) {
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
-        echo "cache_key >>>>>>>> ".$cache_key;
+
+        // Clear the cache before fetching new data
+        $this->cache->delete($cache_key);
+
         $brands = $this->cache->get($cache_key);
-echo "brands >>>>>>>> ".$brands;
+
         $results = array();
 
         if(!$brands) {
@@ -143,7 +146,6 @@ echo "brands >>>>>>>> ".$brands;
             $this->cache->set($cache_key, $results);
 
         } else {
-            print_r("here comes");
             $results = $brands;
         }
 
