@@ -143,6 +143,7 @@ class ModelCatalogProduct extends Model {
             $this->cache->set($cache_key, $results);
 
         } else {
+            print_r("here comes");
             $results = $brands;
         }
 
