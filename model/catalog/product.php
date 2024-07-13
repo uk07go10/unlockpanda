@@ -118,7 +118,10 @@ class ModelCatalogProduct extends Model {
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
 
         // Clear the cache before fetching new data
-        $this->cache->delete($cache_key);
+        if ($this->cache->get($cache_key)) {
+            echo "here cache 6666 s ".$cache_key  "</br>";
+            $this->cache->delete($cache_key);
+        }
 
         $brands = $this->cache->get($cache_key);
 
