@@ -114,36 +114,15 @@ class ModelCatalogProduct extends Model {
         return $results;
     }
 
-    public function clearCache() {
-    // Cache directory path
-    $cache_dir = DIR_CACHE;
-
-    // Get all cache files
-    $files = glob($cache_dir . '*'); // Get all file names
-    foreach ($files as $file) {
-        if (is_file($file)) {
-            unlink($file); // Delete file
-        }
-    }
-
-    // Optional: Log the cache clearing for debugging
-    echo "Cache cleared from: " . $cache_dir;
-}
-
     public function getBrandsByCarrier($carrier_id) {
+
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
-
-        // Clear the cache before fetching new data
-        if ($this->cache->get($cache_key)) {
-             $this->clearCache();
-        }
-
         $brands = $this->cache->get($cache_key);
 
         $results = array();
 
         if(!$brands) {
-          echo "here come2222222 s </br>";
+            echo "fdffdfffd  777777";
             $sql = "SELECT c.category_id, cd.name FROM category c " .
                 "JOIN category_description cd ON (c.category_id = cd.category_id) " .
                 "WHERE c.status = '1' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "' " .
@@ -164,7 +143,7 @@ class ModelCatalogProduct extends Model {
             $this->cache->set($cache_key, $results);
 
         } else {
-            echo "here comes </br>";
+            echo "ssdadadsads  99999";
             $results = $brands;
         }
 
