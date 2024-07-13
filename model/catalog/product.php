@@ -116,11 +116,12 @@ class ModelCatalogProduct extends Model {
 
     public function getBrandsByCarrier($carrier_id) {
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
+        echo "cache_key >>>>>>>> ".$cache_key;
         $brands = $this->cache->get($cache_key);
-
+echo "brands >>>>>>>> ".$brands;
         $results = array();
 
-        // if(!$brands) {
+        if(!$brands) {
           
             $sql = "SELECT c.category_id, cd.name FROM category c " .
                 "JOIN category_description cd ON (c.category_id = cd.category_id) " .
@@ -141,10 +142,10 @@ class ModelCatalogProduct extends Model {
 
             $this->cache->set($cache_key, $results);
 
-        // } else {
-        //     print_r("here comes");
-        //     $results = $brands;
-        // }
+        } else {
+            print_r("here comes");
+            $results = $brands;
+        }
 
         return $results;
 
