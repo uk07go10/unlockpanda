@@ -122,7 +122,6 @@ class ModelCatalogProduct extends Model {
         $results = array();
 
         if(!$brands) {
-            echo "fdffdfffd  777777";
             $sql = "SELECT c.category_id, cd.name FROM category c " .
                 "JOIN category_description cd ON (c.category_id = cd.category_id) " .
                 "WHERE c.status = '1' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "' " .
@@ -143,7 +142,6 @@ class ModelCatalogProduct extends Model {
             $this->cache->set($cache_key, $results);
 
         } else {
-            echo "ssdadadsads  99999";
             $results = $brands;
         }
 
