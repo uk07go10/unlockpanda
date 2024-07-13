@@ -115,53 +115,46 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getBrandsByCarrier($carrier_id) {
-    $cache_key = "brands." . $this->config->get('config_language_id') . "." . $carrier_id;
+        $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
 
-    // Debugging: Log cache key
-    echo "Cache key: " . $cache_key;
-
-    // Clear the cache before fetching new data
-    if ($this->cache->get($cache_key)) {
-        echo "Cache hit. Deleting cache.";
-        $this->cache->delete($cache_key);
-    } else {
-        error_log("Cache miss.");
-    }
-
-    // Attempt to get the cache value again after deletion
-    $brands = $this->cache->get($cache_key);
-
-    $results = array();
-
-    if (!$brands) {
-        echo "Fetching from database </br>";
-
-        $sql = "SELECT c.category_id, cd.name FROM category c " .
-            "JOIN category_description cd ON (c.category_id = cd.category_id) " .
-            "WHERE c.status = '1' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "' " .
-            "AND EXISTS (" .
-            "SELECT ptc.product_id FROM product_to_category ptc WHERE ptc.category_id = c.category_id AND EXISTS ( " .
-            "SELECT mtp.manufacturer_id FROM manufacturer_to_product mtp WHERE ptc.product_id = mtp.product_id AND mtp.manufacturer_id = '" . (int)$this->db->escape($carrier_id) . "' LIMIT 1)" .
-            "AND EXISTS (SELECT p.product_id FROM product p WHERE ptc.product_id = p.product_id AND p.status IN ('1', '2'))) " .
-            "ORDER BY cd.name ASC";
-
-        $data = $this->db->query($sql);
-        foreach ($data->rows as $row) {
-            $results[] = array(
-                "category_id" => $row["category_id"],
-                "name" => $row["name"]
-            );
+        // Clear the cache before fetching new data
+        if ($this->cache->get($cache_key)) {
+            $this->cache->delete("brands.1.459");
         }
 
-        $this->cache->set($cache_key, $results);
-        echo "Cache set for key: " . $cache_key;
-    } else {
-        echo "Fetching from cache </br>";
-        $results = $brands;
-    }
+        $brands = $this->cache->get($cache_key);
 
-    return $results;
-}
+        $results = array();
+
+        if(!$brands) {
+          echo "here come2222222 s </br>";
+            $sql = "SELECT c.category_id, cd.name FROM category c " .
+                "JOIN category_description cd ON (c.category_id = cd.category_id) " .
+                "WHERE c.status = '1' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "' " .
+                "AND EXISTS (" .
+                "SELECT ptc.product_id FROM product_to_category ptc WHERE ptc.category_id = c.category_id AND EXISTS ( " .
+                "SELECT mtp.manufacturer_id FROM manufacturer_to_product mtp WHERE ptc.product_id = mtp.product_id AND mtp.manufacturer_id = '" . (int)$this->db->escape($carrier_id) . "' LIMIT 1)" .
+                "AND EXISTS (SELECT p.product_id FROM product p WHERE ptc.product_id = p.product_id AND p.status IN ('1', '2'))) " .
+                "ORDER BY cd.name ASC";
+
+            $data = $this->db->query($sql);
+            foreach($data->rows as $row) {
+                $results[] = array(
+                    "category_id" => $row["category_id"],
+                    "name" => $row["name"]
+                );
+            }
+
+            $this->cache->set($cache_key, $results);
+
+        } else {
+            echo "here comes </br>";
+            $results = $brands;
+        }
+
+        return $results;
+
+    }
 
     public function getProducts($data = array(), $short = false) {
         if ($this->customer->isLogged()) {
