@@ -117,12 +117,12 @@ class ModelCatalogProduct extends Model {
     public function getBrandsByCarrier($carrier_id) {
 
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
+
         // Clear the cache before fetching new data
         if ($this->cache->get($cache_key)) {
-            error_log("Cache hit. Deleting cache.");
             $this->cache->delete($cache_key);
         }
-        exit(); die;
+
         $brands = $this->cache->get($cache_key);
 
         $results = array();
