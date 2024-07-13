@@ -118,11 +118,11 @@ class ModelCatalogProduct extends Model {
     $cache_key = "brands." . $this->config->get('config_language_id') . "." . $carrier_id;
 
     // Debugging: Log cache key
-    error_log("Cache key: " . $cache_key);
+    echo "Cache key: " . $cache_key;
 
     // Clear the cache before fetching new data
     if ($this->cache->get($cache_key)) {
-        error_log("Cache hit. Deleting cache.");
+        echo "Cache hit. Deleting cache.";
         $this->cache->delete($cache_key);
     } else {
         error_log("Cache miss.");
