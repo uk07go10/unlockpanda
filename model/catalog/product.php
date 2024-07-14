@@ -178,7 +178,7 @@ class ModelCatalogProduct extends Model {
 
         // Fetch new product data after clearing the cache
         $product_data = $this->cache->get($product_cache_key);
-        // dd($product_data);
+        
         if (!$product_data) {
            $sql = "SELECT p.product_id, pd.name, 
         (SELECT AVG(rating) AS total 
@@ -190,131 +190,129 @@ class ModelCatalogProduct extends Model {
         LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) 
         LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id)";
 
-if (!empty($data['filter_tag'])) {
-    $sql .= " LEFT JOIN " . DB_PREFIX . "product_tag pt ON (p.product_id = pt.product_id)";
-}
-
-if (!empty($data['filter_category_id'])) {
-    $sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
-}
-
-$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' 
-         AND p.status IN ('1', '2')  
-         AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-
-if (!empty($data['filter_name']) || !empty($data['filter_tag'])) {
-    $sql .= " AND (";
-
-    if (!empty($data['filter_name'])) {
-        $implode = array();
-        $words = explode(' ', $data['filter_name']);
-
-        foreach ($words as $word) {
-            if (!empty($data['filter_description'])) {
-                $implode[] = "LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%' OR LCASE(pd.description) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%'";
-            } else {
-                $implode[] = "LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%'";
+            if (!empty($data['filter_tag'])) {
+                $sql .= " LEFT JOIN " . DB_PREFIX . "product_tag pt ON (p.product_id = pt.product_id)";
             }
-        }
 
-        if ($implode) {
-            $sql .= " " . implode(" OR ", $implode) . "";
-        }
-    }
+            if (!empty($data['filter_category_id'])) {
+                $sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
+            }
 
-    if (!empty($data['filter_name']) && !empty($data['filter_tag'])) {
-        $sql .= " OR ";
-    }
+            $sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' 
+                    AND p.status IN ('1', '2')  
+                    AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
 
-    if (!empty($data['filter_tag'])) {
-        $implode = array();
-        $words = explode(' ', $data['filter_tag']);
+            if (!empty($data['filter_name']) || !empty($data['filter_tag'])) {
+                $sql .= " AND (";
 
-        foreach ($words as $word) {
-            $implode[] = "LCASE(pt.tag) LIKE '%" . $this->db->escape(utf8_strtolower($data['filter_tag'])) . "%' AND pt.language_id = '" . (int)$this->config->get('config_language_id') . "'";
-        }
+                if (!empty($data['filter_name'])) {
+                    $implode = array();
+                    $words = explode(' ', $data['filter_name']);
 
-        if ($implode) {
-            $sql .= " " . implode(" OR ", $implode) . "";
-        }
-    }
+                    foreach ($words as $word) {
+                        if (!empty($data['filter_description'])) {
+                            $implode[] = "LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%' OR LCASE(pd.description) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%'";
+                        } else {
+                            $implode[] = "LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%'";
+                        }
+                    }
 
-    $sql .= ")";
-}
+                    if ($implode) {
+                        $sql .= " " . implode(" OR ", $implode) . "";
+                    }
+                }
 
-if (!empty($data['filter_category_id'])) {
-    if (!empty($data['filter_sub_category'])) {
-        $implode_data = array();
+                if (!empty($data['filter_name']) && !empty($data['filter_tag'])) {
+                    $sql .= " OR ";
+                }
 
-        $implode_data[] = "p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
+                if (!empty($data['filter_tag'])) {
+                    $implode = array();
+                    $words = explode(' ', $data['filter_tag']);
 
-        $this->load->model('catalog/category');
+                    foreach ($words as $word) {
+                        $implode[] = "LCASE(pt.tag) LIKE '%" . $this->db->escape(utf8_strtolower($data['filter_tag'])) . "%' AND pt.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+                    }
 
-        $categories = $this->model_catalog_category->getCategoriesByParentId($data['filter_category_id']);
+                    if ($implode) {
+                        $sql .= " " . implode(" OR ", $implode) . "";
+                    }
+                }
 
-        foreach ($categories as $category_id) {
-            $implode_data[] = "p2c.category_id = '" . (int)$category_id . "'";
-        }
+                $sql .= ")";
+            }
 
-        $sql .= " AND (" . implode(' OR ', $implode_data) . ")";
-    } else {
-        $sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
-    }
-}
+            if (!empty($data['filter_category_id'])) {
+                if (!empty($data['filter_sub_category'])) {
+                    $implode_data = array();
 
-if (!empty($data['filter_manufacturer_id'])) {
-    $sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";
-}
+                    $implode_data[] = "p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
 
-if (!empty($data['filter_carrier_id'])) {
-    $sql .= " AND EXISTS (SELECT mtp.product_id FROM manufacturer_to_product mtp WHERE mtp.product_id = p.product_id AND mtp.manufacturer_id = '" . (int)$data['filter_carrier_id'] . "')";
-}
+                    $this->load->model('catalog/category');
 
-$sql .= " GROUP BY pd.name";
+                    $categories = $this->model_catalog_category->getCategoriesByParentId($data['filter_category_id']);
 
-$sort_data = array(
-    'pd.name',
-    'p.model',
-    'p.quantity',
-    'p.price',
-    'rating',
-    'p.sort_order',
-    'p.date_added'
-);
+                    foreach ($categories as $category_id) {
+                        $implode_data[] = "p2c.category_id = '" . (int)$category_id . "'";
+                    }
 
-if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
-    if ($data['sort'] == 'pd.name' || $data['sort'] == 'p.model') {
-        $sql .= " ORDER BY LCASE(" . $data['sort'] . ")";
-    } else {
-        $sql .= " ORDER BY " . $data['sort'];
-    }
-} else {
-    $sql .= " ORDER BY p.sort_order";
-}
+                    $sql .= " AND (" . implode(' OR ', $implode_data) . ")";
+                } else {
+                    $sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
+                }
+            }
 
-if (isset($data['order']) && ($data['order'] == 'DESC')) {
-    $sql .= " DESC";
-} else {
-    $sql .= " ASC";
-}
+            if (!empty($data['filter_manufacturer_id'])) {
+                $sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";
+            }
 
-if (isset($data['start']) || isset($data['limit'])) {
-    if ($data['start'] < 0) {
-        $data['start'] = 0;
-    }
+            if (!empty($data['filter_carrier_id'])) {
+                $sql .= " AND EXISTS (SELECT mtp.product_id FROM manufacturer_to_product mtp WHERE mtp.product_id = p.product_id AND mtp.manufacturer_id = '" . (int)$data['filter_carrier_id'] . "')";
+            }
 
-    if ($data['limit'] < 1) {
-        $data['limit'] = 20;
-    }
+            $sql .= " GROUP BY pd.name";
 
-    $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-}
+            $sort_data = array(
+                'pd.name',
+                'p.model',
+                'p.quantity',
+                'p.price',
+                'rating',
+                'p.sort_order',
+                'p.date_added'
+            );
 
-$product_data = array();
+            if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
+                if ($data['sort'] == 'pd.name' || $data['sort'] == 'p.model') {
+                    $sql .= " ORDER BY LCASE(" . $data['sort'] . ")";
+                } else {
+                    $sql .= " ORDER BY " . $data['sort'];
+                }
+            } else {
+                $sql .= " ORDER BY p.sort_order";
+            }
 
-$query = $this->db->query($sql);
+            if (isset($data['order']) && ($data['order'] == 'DESC')) {
+                $sql .= " DESC";
+            } else {
+                $sql .= " ASC";
+            }
 
-            // echo "<pre>"; print_r($query); die;
+            if (isset($data['start']) || isset($data['limit'])) {
+                if ($data['start'] < 0) {
+                    $data['start'] = 0;
+                }
+
+                if ($data['limit'] < 1) {
+                    $data['limit'] = 20;
+                }
+
+                $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+            }
+
+            $product_data = array();
+
+            $query = $this->db->query($sql);
             foreach ($query->rows as $result) {
                 $product_data[$result['product_id']] = ($short ? $result : $this->getProduct($result['product_id']));
             }
