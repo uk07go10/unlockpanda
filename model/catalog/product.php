@@ -49,7 +49,6 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getProduct($product_id) {
-        echo "adssaa"; exit();
         if ($this->customer->isLogged()) {
             $customer_group_id = $this->customer->getCustomerGroupId();
         } else {
@@ -116,6 +115,8 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getBrandsByCarrier($carrier_id) {
+        
+        echo "adssaa"; exit();
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
 
         // Clear the cache before fetching new data
