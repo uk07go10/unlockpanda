@@ -91,8 +91,7 @@ class ModelCatalogProduct extends Model {
         }
     }
 
-    public function getCarriersByProduct($product_id) {
-        exit(); die;
+    public function getCarriersByProduct($product_id) { 
         $cache_key = "product_carrier." . $this->config->get('config_language_id') . "." . $product_id;
         $carriers = $this->cache->get($cache_key);
 
@@ -116,7 +115,6 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getBrandsByCarrier($carrier_id) {
-
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
 
         // Clear the cache before fetching new data
@@ -139,6 +137,7 @@ class ModelCatalogProduct extends Model {
                 "ORDER BY cd.name ASC";
 
             $data = $this->db->query($sql);
+            echo "<pre>"; print_r($data); echo "</pre>";
             foreach($data->rows as $row) {
                 $results[] = array(
                     "category_id" => $row["category_id"],
