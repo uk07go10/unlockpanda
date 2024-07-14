@@ -92,6 +92,7 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getCarriersByProduct($product_id) {
+        exit(); die;
         $cache_key = "product_carrier." . $this->config->get('config_language_id') . "." . $product_id;
         $carriers = $this->cache->get($cache_key);
 
