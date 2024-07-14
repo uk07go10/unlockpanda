@@ -92,6 +92,9 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getCarriersByProduct($product_id) { 
+        
+        
+        echo "adssaa"; exit();
         $cache_key = "product_carrier." . $this->config->get('config_language_id') . "." . $product_id;
         $carriers = $this->cache->get($cache_key);
 
@@ -115,8 +118,6 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getBrandsByCarrier($carrier_id) {
-        
-        echo "adssaa"; exit();
         $cache_key = "brands." . $this->config->get('config_language_id') . " . " . $carrier_id;
 
         // Clear the cache before fetching new data
