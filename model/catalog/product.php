@@ -137,7 +137,6 @@ class ModelCatalogProduct extends Model {
                 "ORDER BY cd.name ASC";
 
             $data = $this->db->query($sql);
-            echo "<pre>"; print_r($data); echo "</pre>";
             foreach($data->rows as $row) {
                 $results[] = array(
                     "category_id" => $row["category_id"],
