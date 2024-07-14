@@ -262,7 +262,7 @@ class ModelCatalogProduct extends Model {
                 $sql .= " AND EXISTS (SELECT mtp.product_id FROM manufacturer_to_product mtp WHERE mtp.product_id = p.product_id AND mtp.manufacturer_id = '" . (int)$data['filter_carrier_id'] . "')";
             }
 
-            $sql .= " GROUP BY p.product_id";
+            $sql .= " GROUP BY p.product_name";
 
             $sort_data = array(
                 'pd.name',
@@ -305,7 +305,7 @@ class ModelCatalogProduct extends Model {
             $product_data = array();
 
             $query = $this->db->query($sql);
-            echo "<pre>"; print_r($query); die;
+            // echo "<pre>"; print_r($query); die;
             foreach ($query->rows as $result) {
                 $product_data[$result['product_id']] = ($short ? $result : $this->getProduct($result['product_id']));
             }
