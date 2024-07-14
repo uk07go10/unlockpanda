@@ -262,7 +262,7 @@ class ModelCatalogProduct extends Model {
                 $sql .= " AND EXISTS (SELECT mtp.product_id FROM manufacturer_to_product mtp WHERE mtp.product_id = p.product_id AND mtp.manufacturer_id = '" . (int)$data['filter_carrier_id'] . "')";
             }
 
-            $sql .= " GROUP BY p.name";
+            $sql .= " GROUP BY p.product_id";
 
             $sort_data = array(
                 'pd.name',
