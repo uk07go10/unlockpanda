@@ -155,9 +155,6 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getProducts($data = array(), $short = false) {
-        
-        
-        echo "adssaa"; exit();
         if ($this->customer->isLogged()) {
             $customer_group_id = $this->customer->getCustomerGroupId();
         } else {
@@ -294,7 +291,7 @@ class ModelCatalogProduct extends Model {
             $product_data = array();
 
             $query = $this->db->query($sql);
-
+            echo "<pre>"; print_r($query); die;
             foreach ($query->rows as $result) {
                 $product_data[$result['product_id']] = ($short ? $result : $this->getProduct($result['product_id']));
             }
