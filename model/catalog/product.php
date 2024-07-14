@@ -161,10 +161,24 @@ class ModelCatalogProduct extends Model {
             $customer_group_id = $this->config->get('config_customer_group_id');
         }
 
-        $cache = md5(http_build_query($data)) . ($short ? ".short" : "");
+        // Construct the cache key
+        $cache_key = md5(http_build_query($data)) . ($short ? ".short" : "");
 
-        $product_data = $this->cache->get('product.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . (int)$customer_group_id . '.' . $cache);
+        // Clear the cache before fetching new data
+        if ($this->cache->get($cache_key)) {
+            $this->cache->delete($cache_key);
+        }
 
+        // Optionally, clear specific product data cache
+        $product_cache_key = 'product.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . (int)$customer_group_id . '.' . $cache_key;
+
+        if ($this->cache->get($product_cache_key)) {
+            $this->cache->delete($product_cache_key);
+        }
+
+        // Fetch new product data after clearing the cache
+        $product_data = $this->cache->get($product_cache_key);
+        dd($product_data);
         if (!$product_data) {
             $sql = "SELECT p.product_id, pd.name, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id)";
 
