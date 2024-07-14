@@ -314,7 +314,7 @@ $product_data = array();
 
 $query = $this->db->query($sql);
 
-            echo "<pre>"; print_r($query); die;
+            // echo "<pre>"; print_r($query); die;
             foreach ($query->rows as $result) {
                 $product_data[$result['product_id']] = ($short ? $result : $this->getProduct($result['product_id']));
             }
