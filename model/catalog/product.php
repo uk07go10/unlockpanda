@@ -178,7 +178,7 @@ class ModelCatalogProduct extends Model {
 
         // Fetch new product data after clearing the cache
         $product_data = $this->cache->get($product_cache_key);
-        dd($product_data);
+        // dd($product_data);
         if (!$product_data) {
             $sql = "SELECT p.product_id, pd.name, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id)";
 
